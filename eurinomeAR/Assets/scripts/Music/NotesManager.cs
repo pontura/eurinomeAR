@@ -23,11 +23,8 @@ public class NotesManager : MonoBehaviour
     public MusicSourceTarget msTarget;
     public float speed;
     public bool isOn;
+    public MusicTrail musicTrail;
 
-    void Start()
-    {
-        
-    }
     public void Reset()
     {
         noteID = 0;
@@ -40,8 +37,6 @@ public class NotesManager : MonoBehaviour
     {
         if (isOn)
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-                return;
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -130,5 +125,10 @@ public class NotesManager : MonoBehaviour
         NoteScript ns = all[noteID];
         ns.SetOn();
         msTarget.SetValues(ns.pos);
+
+        bool force = false;
+        if (noteID == 0)
+            force = true;
+        musicTrail.Goto(ns.transform.localPosition, force);
     }
 }

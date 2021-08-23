@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MusicUI : MonoBehaviour
 {
     public NotesManager[] notesManager;
+    public ARButton[] buttons;
     Animation anim;
 
     public int id = 1; 
@@ -14,6 +15,7 @@ public class MusicUI : MonoBehaviour
     {
         anim = GetComponent<Animation>();
         SetButtons();
+
     }
     void OnToogle()
     {
@@ -46,5 +48,16 @@ public class MusicUI : MonoBehaviour
             nm.isOn = false;
 
         notesManager[id - 1].isOn = true;
+
+        int buttonID = 0;
+        foreach (ARButton arButton in buttons)
+        {
+            arButton.Init(buttonID, OnClicked);
+            buttonID++;
+        }
+    }
+    void OnClicked(int id)
+    {
+        OnToogle();
     }
 }
