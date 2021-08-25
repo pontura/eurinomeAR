@@ -931,6 +931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8168857408901698998}
+  - component: {fileID: 360976229}
   m_Layer: 0
   m_Name: DressUp
   m_TagString: Untagged
@@ -953,6 +954,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &360976229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168857408901698997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c52b5dcc2746e4088cebba16b3f507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8168857408918902782
 GameObject:
   m_ObjectHideFlags: 0
