@@ -11,7 +11,7 @@ public class VideogameParallax : MonoBehaviour
     void Update()
     {
         Vector2 pos = bg1.transform.localPosition;
-        pos.y -= (videogame.speed/ dividedBy) * Time.deltaTime;
+        pos.y -= (videogame.stats.Get().speed/ dividedBy) * Time.deltaTime;
 
         if (pos.y < -900)
             pos.y = 0;

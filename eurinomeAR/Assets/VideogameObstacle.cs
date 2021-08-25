@@ -7,13 +7,24 @@ public class VideogameObstacle : MonoBehaviour
     float speed;
     public float max = 550;
     VideogameObstacles obstacles;
+    public GameObject asset;
+    public PngSequenceAnim explotion;
+    public GameObject[] assets;
 
-    public void Init(VideogameObstacles obstacles, float speed)
+    public void Init(VideogameObstacles obstacles)
     {
         this.obstacles = obstacles;
-        this.speed = speed;
+        explotion.gameObject.SetActive(false);
+        RefreshStats();
     }
-
+    public void RefreshStats()
+    {
+        VideogameStats.StatData data = obstacles.videogame.stats.Get();
+        speed = data.speed;
+        foreach (GameObject go in assets)
+            go.SetActive(false);
+        assets[data.level - 1].SetActive(true);
+    }
     void Update()
     {
         Vector2 pos = transform.localPosition;
@@ -29,10 +40,16 @@ public class VideogameObstacle : MonoBehaviour
     }
     public void OnFired()
     {
-        End();
+        DestroyAsset();
     }
     public void OnHitNave()
     {
-        End();
+        DestroyAsset();
+    }
+    void DestroyAsset()
+    {
+        GetComponent<Collider2D>().enabled = false;
+        explotion.Init(End, 0.1f);
+        asset.SetActive(false);
     }
 }

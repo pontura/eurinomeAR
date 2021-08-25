@@ -9,9 +9,11 @@ public class PngSequenceAnim : MonoBehaviour
     public Image image;
     System.Action OnDone;
     int id = 0;
+    float speed = 0.2f;
 
-    public void Init(System.Action OnDone)
+    public void Init(System.Action OnDone, float speed = 0.2f)
     {
+        this.speed = speed;
         gameObject.SetActive(true);
         id = 0;
         this.OnDone = OnDone;
@@ -29,7 +31,7 @@ public class PngSequenceAnim : MonoBehaviour
             Sprite s = all[id];
             image.sprite = s;
             id++;
-            Invoke("Loop", 0.2f);
+            Invoke("Loop", speed);
         }
     }
 }

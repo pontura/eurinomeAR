@@ -10,7 +10,7 @@ public class Videogame : MonoBehaviour
 
     public states state;
 
-    public float speed = 200;
+    public VideogameStats stats;
 
     public enum states
     {
@@ -22,17 +22,10 @@ public class Videogame : MonoBehaviour
     {
         InitPlaying();
         obstacles.Init(this);
-        Loop();
     }
     public void Init()
     {
         InitPlaying();
-    }
-    void Loop()
-    {
-        if(state == states.PLAYING)
-            speed++;
-        Invoke("Loop", 1);
     }
     void InitPlaying()
     {
@@ -47,4 +40,5 @@ public class Videogame : MonoBehaviour
         obstacles.Reset();
         state = states.GAME_OVER;
     }
+    
 }

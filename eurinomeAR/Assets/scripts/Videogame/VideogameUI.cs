@@ -5,20 +5,34 @@ using UnityEngine.UI;
 
 public class VideogameUI : MonoBehaviour
 {
-    public ARButton button;
+    public ARButton[] buttons;
     public Videogame videogame;
     public Text scoreField;
+    public VideogameStats stats;
     int score = 0;
 
     void Start()
     {
-        button.Init(0, OnClick);
         score = 0;
+        int id = 0;
+        foreach(ARButton b in buttons)
+        {
+            b.Init(id, OnClick);
+            id++;
+        }
+        buttons[2].OnButtonClick();
     }
 
     void OnClick(int id)
     {
-        
+        foreach (ARButton b in buttons)
+        {
+            if (b.id == id)
+                b.SetOn(true);
+            else
+                b.SetOn(false);
+        }
+        stats.SetStat(id);
     }
     public void AddScore(int qty)
     {
