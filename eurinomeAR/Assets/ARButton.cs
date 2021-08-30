@@ -22,9 +22,11 @@ public class ARButton : MonoBehaviour
             return; 
         }
         this.OnClicked(id);
+        SetOn(true);
     }
     public void SetOn(bool isOn)
     {
+        if (anim == null) return;
         if(isOn)
             anim.Play("buttonOn");
         else

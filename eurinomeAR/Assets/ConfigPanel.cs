@@ -22,10 +22,10 @@ public class ConfigPanel : MonoBehaviour
             Close();
         else
             Open();
-        isOpen = !isOpen;
     }
     void Open()
     {
+        isOpen = true;
         panel.SetActive(true);
     }
     void Close()

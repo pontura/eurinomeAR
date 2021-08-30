@@ -25,6 +25,10 @@ public class NotesManager : MonoBehaviour
     public bool isOn;
     public MusicTrail musicTrail;
 
+    private void Start()
+    {
+        cam = Camera.main;
+    }
     public void Reset()
     {
         noteID = 0;
@@ -129,6 +133,7 @@ public class NotesManager : MonoBehaviour
         bool force = false;
         if (noteID == 0)
             force = true;
+
         musicTrail.Goto(ns.transform.localPosition, force);
     }
 }
