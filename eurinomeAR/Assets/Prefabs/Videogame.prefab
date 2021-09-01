@@ -3892,7 +3892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5824382939777265547
 Transform:
   m_ObjectHideFlags: 0
@@ -4154,6 +4154,8 @@ MonoBehaviour:
   all: []
   smooth: 0.5
   limitZ: 50
+  from_to_scale: {x: 0.01, y: 1}
+  scale_speed: 0.01
 --- !u!1 &7200449425095064169
 GameObject:
   m_ObjectHideFlags: 0
