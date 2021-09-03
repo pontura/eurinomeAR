@@ -33,17 +33,34 @@ public class ConfigPanel : MonoBehaviour
         isOpen = false;
         panel.SetActive(false);
     }
-    public void ShowGame(int id)
+    public void OnTargetHide(int id)
+    {
+        print("____OnTargetHide__ " + id);
+        int thisID = 0;
+        foreach (ArExperience arExperience in games)
+        {
+            if (thisID == id)
+                arExperience.SetOn(false);
+            thisID++;
+        }
+    }
+    int lastIdFound = -1;
+    public void OnTargetFound(int id)
     {
         int thisID = 0;
         foreach (ArExperience arExperience in games)
         {
             if (thisID == id)
+            {
                 arExperience.SetOn(true);
+                if (id != lastIdFound)
+                    arExperience.Init();
+            }
             else
                 arExperience.SetOn(false);
             thisID++;
-        }
+        }        
+        lastIdFound = id;
     }
     public void SetScale()
     {

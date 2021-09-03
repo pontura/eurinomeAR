@@ -664,6 +664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89693bef31782374ea743a4f4831da10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystickPanel: {fileID: 0}
+  analogicKnob: {fileID: 0}
 --- !u!4 &2068731510
 Transform:
   m_ObjectHideFlags: 0
@@ -697,6 +699,10 @@ PrefabInstance:
     - target: {fileID: 5824382939777265544, guid: 11eb333ff36e74447a5f9952746278cf, type: 3}
       propertyPath: m_Name
       value: Videogame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824382939777265544, guid: 11eb333ff36e74447a5f9952746278cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5824382939777265547, guid: 11eb333ff36e74447a5f9952746278cf, type: 3}
       propertyPath: m_RootOrder

@@ -10,14 +10,22 @@ public class ArExperience : MonoBehaviour
         INTRO,
         GAME
     }
-    public Intro intro;
+    public GameObject intro;
     public GameObject game;
+    public ARButton closeButton;
+    public ARButton playButton;
+    bool playClicked;
 
     public void Init()
     {
-        state = states.INTRO;
-        intro.gameObject.SetActive(true);
-        game.gameObject.SetActive(false);
+        
+        GotoIntro();
+        closeButton.Init(0, OnClose);
+        playButton.Init(1, OnButtonclicked);
+    }
+    void OnClose(int id)
+    {
+        GotoIntro();
     }
     public void SetOn(bool isOn)
     {
@@ -25,9 +33,29 @@ public class ArExperience : MonoBehaviour
     }
     public void GotoGame()
     {
+        closeButton.gameObject.SetActive(true);
         state = states.GAME;
-        intro.gameObject.SetActive(false);
-        game.gameObject.SetActive(true);
-
+        intro.SetActive(false);
+        game.SetActive(true);
+    }
+    public void GotoIntro()
+    {
+        playClicked = false;
+        closeButton.gameObject.SetActive(false);
+        state = states.INTRO;
+        intro.SetActive(true);
+        game.SetActive(false);
+    }
+    void OnButtonclicked(int id)
+    {
+        if (playClicked) return;
+        playClicked = true;
+        Invoke("DoAction", 0.5f);
+        playClicked = true;
+    }
+    void DoAction()
+    {
+        playClicked = false;
+        GetComponentInParent<ArExperience>().GotoGame();
     }
 }

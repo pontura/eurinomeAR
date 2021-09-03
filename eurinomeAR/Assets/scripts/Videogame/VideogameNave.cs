@@ -8,10 +8,11 @@ public class VideogameNave : MonoBehaviour
     public float x_offset = 600;
     public VideogameFire fire;
     public float fireSpeed = 1000;
+    public float speed = 100;
     public PngSequenceAnim explotion;
     public GameObject asset;
     public Transform targetToMove;
-    public Camera cam;
+   // public Camera cam;
     bool canFire = true;
 
     private void Start()
@@ -34,24 +35,27 @@ public class VideogameNave : MonoBehaviour
     {
         if(videogame.state == Videogame.states.PLAYING)
         {
-            float _target_x;
-
-            if (targetToMove != null)
-                _target_x = cam.WorldToScreenPoint(targetToMove.position).x;
-            else
-                _target_x = Input.mousePosition.x;
-
-            float _x = (_target_x - (Screen.width / 2)) / (Screen.width / 4f);
-
-
             Vector2 pos = transform.localPosition;
-            float to = _x * x_offset;
-
-            if (to < -x_offset) to = -x_offset;
-            if (to > x_offset) to = x_offset;
-
-            pos.x = Mathf.Lerp(pos.x, to, 0.05f);
+            pos.x += GamesManager.Instance.analogicKnob.NormalizedAxis.x * speed * Time.deltaTime;
+            if (pos.x < -x_offset) pos.x = -x_offset;
+            if (pos.x > x_offset) pos.x = x_offset;
             transform.localPosition = pos;
+            //float _target_x;
+
+            //if (targetToMove != null)
+            //    _target_x = cam.WorldToScreenPoint(targetToMove.position).x;
+            //else
+            //    _target_x = Input.mousePosition.x;
+
+            //float _x = (_target_x - (Screen.width / 2)) / (Screen.width / 4f);
+
+
+            //Vector2 pos = transform.localPosition;
+            //float to = _x * x_offset;
+
+  
+
+            //pos.x = Mathf.Lerp(pos.x, to, 0.05f);
             //if (Input.GetMouseButtonDown(0))
             //{
             //    Fire();

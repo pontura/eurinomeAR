@@ -22,6 +22,17 @@ public class Videogame : MonoBehaviour
     {
         InitPlaying();
         obstacles.Init(this);
+        
+    }
+    void OnEnable()
+    {
+        Events.OnJoystickPressed += OnJoystickPressed;
+        Events.ShowJoystick(true);
+    }
+    private void OnDisable()
+    {
+        Events.OnJoystickPressed -= OnJoystickPressed;
+        Events.ShowJoystick(false);
     }
     public void Init()
     {
@@ -31,7 +42,7 @@ public class Videogame : MonoBehaviour
     {
         state = states.PLAYING;
     }
-    public void Fire()
+    void OnJoystickPressed()
     {
         nave.Fire();
     }

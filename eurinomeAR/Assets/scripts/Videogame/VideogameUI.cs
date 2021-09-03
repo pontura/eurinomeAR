@@ -13,6 +13,8 @@ public class VideogameUI : MonoBehaviour
 
     void Start()
     {
+        if (buttons.Length == 0)
+            return;
         score = 0;
         int id = 0;
         foreach(ARButton b in buttons)
@@ -20,7 +22,7 @@ public class VideogameUI : MonoBehaviour
             b.Init(id, OnClick);
             id++;
         }
-        buttons[2].OnButtonClick();
+        buttons[0].OnButtonClick();
     }
 
     void OnClick(int id)

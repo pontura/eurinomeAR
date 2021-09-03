@@ -17,15 +17,26 @@ public class ParticlesFromCenter : MonoBehaviour
     public float delaySmall = 1f;
     Transform container;
 
-    void Start()
+    private void Start()
     {
         container = GameObject.Find("particlesContainer").transform;
         all.Clear();
         cam = Camera.main;
-        Add();
-        Invoke("AddSmall", delaySmall);
     }
-
+    void OnEnable()
+    {
+        if (particles.Length > 0)
+            Add();
+        if(smallParticles.Length>0)
+            Invoke("AddSmall", delaySmall);
+    }
+    private void OnDisable()
+    {
+        print("_____________________OnDisable");
+        CancelInvoke();
+        all.Clear();
+        Utils.RemoveAllChildsIn(container);
+    }
     void Add()
     {
         Invoke("Add", delay);
@@ -36,6 +47,7 @@ public class ParticlesFromCenter : MonoBehaviour
     }
     void AddSmall()
     {
+        print("small");
         Invoke("AddSmall", delaySmall);
         VideogameParticle vp = Instantiate(smallParticles[Random.Range(0, smallParticles.Length)], transform);
         vp.transform.SetParent(container);
@@ -48,6 +60,7 @@ public class ParticlesFromCenter : MonoBehaviour
         VideogameParticle toRemove = null;
         foreach (VideogameParticle v in all)
         {
+           
             Vector3 pos = v.transform.localPosition;
             Vector3 to = camOffset;
             v.transform.localPosition = Vector3.Lerp(pos, to, smooth * Time.deltaTime);
@@ -57,6 +70,9 @@ public class ParticlesFromCenter : MonoBehaviour
             if (_scale > from_to_scale.y)
                 _scale = from_to_scale.y;
             v.transform.localScale = new Vector3(_scale, _scale, _scale);
+            v.timer += Time.deltaTime;
+            if (v.timer > 7)
+                toRemove = v;
         }
         if(toRemove != null)
         {

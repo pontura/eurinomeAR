@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LeoLuz.PlugAndPlayJoystick;
 
 public class GamesManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GamesManager mInstance;
+    public static GamesManager Instance
     {
-        
+        get { return mInstance; }
     }
+    public GameObject joystickPanel;
+    public AnalogicKnob analogicKnob;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        mInstance = this;
+        joystickPanel.SetActive(false);
+        Events.ShowJoystick += ShowJoystick;
+    }
+    void OnDestroy()
+    {
+        Events.ShowJoystick -= ShowJoystick;
+    }
+    void ShowJoystick(bool showIt)
+    {
+        joystickPanel.SetActive(showIt);
+    }
+    public void OnJoystickPressed()
+    {
+        Events.OnJoystickPressed();
     }
 }
