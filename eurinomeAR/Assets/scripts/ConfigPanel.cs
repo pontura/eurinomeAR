@@ -10,11 +10,18 @@ public class ConfigPanel : MonoBehaviour
     public ArExperience[] games;
     public InputField scaleField;
     float scale = 100;
+    public bool forceInitActive;
 
     void Start()
     {
         Close();
         scaleField.text = scale.ToString();
+        if(forceInitActive)
+        {
+            foreach (ArExperience a in games)
+                if (a.isActiveAndEnabled)
+                    a.Init();
+        }
     }
     public void Toggle()
     {        

@@ -17,8 +17,7 @@ public class ArExperience : MonoBehaviour
     bool playClicked;
 
     public void Init()
-    {
-        
+    {        
         GotoIntro();
         closeButton.Init(0, OnClose);
         playButton.Init(1, OnButtonclicked);
