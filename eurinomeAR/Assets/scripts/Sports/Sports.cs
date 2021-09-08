@@ -14,6 +14,7 @@ public class Sports : MonoBehaviour
     public float maxSpeed = 3;
     public float maxRealSpeed = 35;
     public float initTime;
+    public float rotationSpeed = 10;
     public enum states
     {
         IDLE,
@@ -33,8 +34,10 @@ public class Sports : MonoBehaviour
     {
         Events.OnJoystickPressed += OnJoystickPressed;
         Events.ShowJoystick(true);
+        SetRotation(0);
+        characterAnims.SetSpeed(0);
     }
-    private void OnDisable()
+        private void OnDisable()
     {
         Events.OnJoystickPressed -= OnJoystickPressed;
         Events.ShowJoystick(false);
@@ -63,10 +66,13 @@ public class Sports : MonoBehaviour
         else if (speed > maxSpeed)
             speed = maxSpeed;
 
+        SetRotation();
+
         characterAnims.SetSpeed(speed);
 
         SetSpeed();
         SetResistencia();
+        SetRitmo();
     }
     float normalizedSpeed = 1;
     void SetSpeed()
@@ -78,7 +84,7 @@ public class Sports : MonoBehaviour
     public float resistenciaValue;
     public float resistencia = 1;
     public float resistencia_Speed = 2;
-    float timeToResistencia = 30;
+    public float timeToResistencia = 30;
     void SetResistencia()
     {
         resistencia = (Time.time - initTime) / (timeToResistencia);
@@ -86,5 +92,25 @@ public class Sports : MonoBehaviour
         if (resistencia > 1) resistencia = 1;
         else if (resistencia < 0) resistencia = 0;
         lines[1].SetValue("", 1-resistencia);
+    }
+    void SetRotation()
+    {
+        float x = GamesManager.Instance.analogicKnob.NormalizedAxis.x;
+        if (x == 0) return;
+        x *= rotationSpeed * Time.deltaTime;
+        SetRotation(x);
+    }
+    void SetRotation(float _x)
+    {
+        transform.Rotate(-Vector3.forward * _x);
+        characterAnims.transform.Rotate(Vector3.up * _x);
+    }
+    int min_ritmo = 60;
+    int max_ritmo = 100; 
+    void SetRitmo()
+    {
+        float ritmo = ((normalizedSpeed/5)*40) + 60;
+        string fieldValue = ((int)(ritmo)).ToString() + "pp/m";
+        lines[2].SetValue(fieldValue, normalizedSpeed / 5);
     }
 }

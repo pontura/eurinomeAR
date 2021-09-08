@@ -6,10 +6,12 @@ public class CharacterAnims : MonoBehaviour
 {
     public float fade = 0.1f;
     public Animation anim;
-    int lastSpeedID;
+    int lastSpeedID = -1;
 
     public void SetSpeed(float speed)
     {
+        print("SetSpeed " + speed);
+
         int newSpeed = 0;
         if (speed == 0)
             newSpeed = 0;
