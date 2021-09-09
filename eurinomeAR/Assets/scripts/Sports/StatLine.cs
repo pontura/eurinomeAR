@@ -15,8 +15,13 @@ public class StatLine : MonoBehaviour
         title.text = text;
         value = defaultValue;
     }
-    public void SetValue(string fieldValue, float normalizedValue)
+    public void SetValue(string fieldValue, float normalizedValue, Color color)
     {
+        if (color != Color.black)
+        {
+            valueField.color = color;
+            progressImage.color = color;
+        }
         valueField.text = fieldValue;
         value = normalizedValue;
         progressImage.fillAmount = value;

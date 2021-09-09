@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sports : MonoBehaviour
 {
     public states state;
-
+    public Vector2 bestSpeed;
     public StatLine[] lines;
     public CharacterAnims characterAnims;
     public float desaceleration;
     public float aceleration;
-    public float speed;
+    public float speed = 1.5f;
     public float maxSpeed = 3;
     public float maxRealSpeed = 35;
     public float initTime;
     public float rotationSpeed = 10;
+    public Text distanceField;
+    public Image progressbar;
+    float progressValue;
+    public float progressSpeedValue = 1;
+    public int speedReal = 0;
+    public Animation anim;
+
+    public Color okColor;
+    public Color wrongColor;
+    public Color activeColor;
+
     public enum states
     {
         IDLE,
@@ -53,6 +65,7 @@ public class Sports : MonoBehaviour
     void OnJoystickPressed()
     {
         speed += aceleration;
+        anim.Play();
     }
     public void OnGameOver()
     {
@@ -60,6 +73,24 @@ public class Sports : MonoBehaviour
     }
     private void Update()
     {
+        if (speedReal > bestSpeed.x && speedReal < bestSpeed.y)
+        {
+            progressValue += progressSpeedValue * Time.deltaTime;
+            activeColor = okColor;
+        }
+        else
+        {
+            activeColor = wrongColor;
+            progressValue -= progressSpeedValue * Time.deltaTime;
+        }
+        if (progressValue < 0)
+            progressValue = 0;
+        else if (progressValue > 1)
+            progressValue = 1;
+
+        progressbar.color = activeColor;
+        progressbar.fillAmount = progressValue;
+
         speed -= desaceleration * Time.deltaTime;
         if (speed < 0)
             speed = 0;
@@ -73,13 +104,16 @@ public class Sports : MonoBehaviour
         SetSpeed();
         SetResistencia();
         SetRitmo();
+        SetDistance();
     }
     float normalizedSpeed = 1;
     void SetSpeed()
     {
         normalizedSpeed = speed / maxSpeed;
-        string fieldValue = ((int)(maxRealSpeed * normalizedSpeed)).ToString() + "km/h";
-        lines[0].SetValue(fieldValue, normalizedSpeed);
+        speedReal = (int)(maxRealSpeed * normalizedSpeed);
+        string fieldValue = speedReal.ToString() + "km/h";
+        lines[0].SetValue(fieldValue, normalizedSpeed,  activeColor);
+
     }
     public float resistenciaValue;
     public float resistencia = 1;
@@ -91,7 +125,7 @@ public class Sports : MonoBehaviour
         initTime += Time.deltaTime * (1-normalizedSpeed) * resistencia_Speed;
         if (resistencia > 1) resistencia = 1;
         else if (resistencia < 0) resistencia = 0;
-        lines[1].SetValue("", 1-resistencia);
+        lines[1].SetValue("", 1-resistencia, Color.black);
     }
     void SetRotation()
     {
@@ -106,11 +140,22 @@ public class Sports : MonoBehaviour
         characterAnims.transform.Rotate(Vector3.up * _x);
     }
     int min_ritmo = 60;
-    int max_ritmo = 100; 
+    int max_ritmo = 100;
+    float ritmo_c = 0.2f;
     void SetRitmo()
     {
-        float ritmo = ((normalizedSpeed/5)*40) + 60;
+        float v = 0.1f + (normalizedSpeed / 2);
+        if (v > 0.9f) v = 0.9f;
+        ritmo_c = Mathf.Lerp(ritmo_c, v, 0.001f);      
+        float ritmo = (ritmo_c * 40) + 60;
         string fieldValue = ((int)(ritmo)).ToString() + "pp/m";
-        lines[2].SetValue(fieldValue, normalizedSpeed / 5);
+        lines[2].SetValue(fieldValue, ritmo_c, Color.black);
+    }
+    float dist = 0;
+    public float distFactor = 0.25f;
+    void SetDistance()
+    {
+        dist += speed * distFactor;
+        distanceField.text = (int)dist + "m";
     }
 }

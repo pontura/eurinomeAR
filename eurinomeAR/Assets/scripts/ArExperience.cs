@@ -12,14 +12,14 @@ public class ArExperience : MonoBehaviour
     }
     public GameObject intro;
     public GameObject game;
-    public ARButton closeButton;
+   // public ARButton closeButton;
     public ARButton playButton;
     bool playClicked;
 
     public void Init()
     {        
         GotoIntro();
-        closeButton.Init(0, OnClose);
+        // closeButton.Init(0, OnClose);
         playButton.Init(1, OnButtonclicked);
     }
     void OnClose(int id)
@@ -32,7 +32,7 @@ public class ArExperience : MonoBehaviour
     }
     public void GotoGame()
     {
-        closeButton.gameObject.SetActive(true);
+        // closeButton.gameObject.SetActive(true);
         state = states.GAME;
         intro.SetActive(false);
         game.SetActive(true);
@@ -40,7 +40,7 @@ public class ArExperience : MonoBehaviour
     public void GotoIntro()
     {
         playClicked = false;
-        closeButton.gameObject.SetActive(false);
+        // closeButton.gameObject.SetActive(false);
         state = states.INTRO;
         intro.SetActive(true);
         game.SetActive(false);
