@@ -16,7 +16,7 @@ public class NotesManager : MonoBehaviour
     }
     public Transform container;
     public Camera cam;
-    float timer;
+    public float timer;
     public float timeToAdd = 0.2f;
     public List<NoteScript> all;
     public int noteID;
@@ -42,16 +42,16 @@ public class NotesManager : MonoBehaviour
         if (isOn)
         {
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetMouseButtonDown(0))
             {
                 Reset();
                 Draw();
             }
-            else if (Input.GetKey(KeyCode.Mouse0))
+            else if (Input.GetMouseButton(0))
             {
                 SavePoints();
             }
-            else if (Input.GetKeyUp(KeyCode.Mouse0))
+            else if (Input.GetMouseButtonUp(0))
             {
                 Done();
             }

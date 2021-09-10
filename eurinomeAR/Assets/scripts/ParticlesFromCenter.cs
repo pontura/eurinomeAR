@@ -25,6 +25,9 @@ public class ParticlesFromCenter : MonoBehaviour
     }
     void OnEnable()
     {
+        container = GameObject.Find("particlesContainer").transform;
+        container.gameObject.SetActive(true);
+        Utils.RemoveAllChildsIn(container);
         if (particles.Length > 0)
             Add();
         if(smallParticles.Length>0)
@@ -32,10 +35,9 @@ public class ParticlesFromCenter : MonoBehaviour
     }
     private void OnDisable()
     {
-        print("_____________________OnDisable");
+        container.gameObject.SetActive(false);
         CancelInvoke();
         all.Clear();
-        Utils.RemoveAllChildsIn(container);
     }
     void Add()
     {
@@ -47,7 +49,6 @@ public class ParticlesFromCenter : MonoBehaviour
     }
     void AddSmall()
     {
-        print("small");
         Invoke("AddSmall", delaySmall);
         VideogameParticle vp = Instantiate(smallParticles[Random.Range(0, smallParticles.Length)], transform);
         vp.transform.SetParent(container);
