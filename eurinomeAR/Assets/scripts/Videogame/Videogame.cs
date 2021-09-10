@@ -11,6 +11,7 @@ public class Videogame : MonoBehaviour
     public states state;
 
     public VideogameStats stats;
+    public GameObject IntroPanel;
 
     public enum states
     {
@@ -20,36 +21,68 @@ public class Videogame : MonoBehaviour
     }
     void Start()
     {
+        //Intro();
+    }
+    public void InitGame()
+    {
+        Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
+        Events.OnTipTimout(TipController.types.JOYSTICK, "Usa para moverte", 3);
+        nave.Init();
+        IntroPanel.SetActive(false);
         InitPlaying();
         obstacles.Init(this);
-        
+        Events.PlaySound("music", "naveMusic", true);
+    }
+    void Intro()
+    {
+        IntroPanel.SetActive(true);
+        Events.PlaySound("music", "", true);
+        Events.OnTip(TipController.types.PLAY_BUTTON, "Apretá para jugar!", true);
     }
     void OnEnable()
     {
         Events.OnJoystickPressed += OnJoystickPressed;
         Events.ShowJoystick(true);
+        Events.OnTip(TipController.types.PLAY_BUTTON, "Apretá para jugar!", true);
     }
     private void OnDisable()
     {
         Events.OnJoystickPressed -= OnJoystickPressed;
         Events.ShowJoystick(false);
     }
-    public void Init()
+    void Init()
     {
         InitPlaying();
     }
     void InitPlaying()
     {
         state = states.PLAYING;
+        Invoke("Tip", 8);
+    }
+    void Tip()
+    {
+        CancelInvoke();
+        Events.OnTipTimout(TipController.types.NAVE_LEVELS, "Usa estos botones para cambiar de nivel!", 4);
     }
     void OnJoystickPressed()
     {
-        nave.Fire();
+        if (state == states.PLAYING)
+            nave.Fire();
+        else if (state == states.IDLE)
+            InitGame();
     }
     public void OnGameOver()
     {
+        CancelInvoke();
+        Events.PlaySound("music", "", true);
         obstacles.Reset();
-        state = states.GAME_OVER;
+        state = states.GAME_OVER;        
     }
-    
+    public void Restart()
+    {
+        state = states.IDLE;
+        Intro();
+    }
+
+
 }

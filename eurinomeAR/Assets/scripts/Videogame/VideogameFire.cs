@@ -29,7 +29,7 @@ public class VideogameFire : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {        
-        VideogameObstacle obstacle = collision.gameObject.GetComponent<VideogameObstacle>();
+        VideogameObstacle obstacle = collision.gameObject.GetComponentInParent<VideogameObstacle>();
         if (obstacle != null)
         {
             obstacle.OnFired();
