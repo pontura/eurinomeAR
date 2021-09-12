@@ -37,6 +37,7 @@ public class ArExperience : MonoBehaviour
         intro.SetActive(false);
         game.SetActive(true);
     }
+    
     public void GotoIntro()
     {
         playClicked = false;

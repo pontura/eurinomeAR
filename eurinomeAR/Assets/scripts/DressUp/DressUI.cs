@@ -47,9 +47,12 @@ public class DressUI : MonoBehaviour
     private void OnEnable()
     {
         OnMenuClicked(0);
+        Invoke("Delayed", 0.7f);
+    }
+    void Delayed()
+    {
         Events.OnTip(TipController.types.INITIAL_TIP, GamesManager.Instance.texts.GetText("INITIAL_TIP_DRESS"), true);
     }
-
     public void OnMenuClicked(int id)
     {
         Events.OnTip(TipController.types.INITIAL_TIP, "", false);
