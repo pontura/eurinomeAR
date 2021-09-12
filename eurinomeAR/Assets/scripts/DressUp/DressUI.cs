@@ -43,7 +43,11 @@ public class DressUI : MonoBehaviour
     }
     public PaletasData[] paletas;
 
-    
+    private void OnEnable()
+    {
+        OnMenuClicked(0);
+    }
+
     public void OnMenuClicked(int id)
     {
         this.id = id;
@@ -54,12 +58,23 @@ public class DressUI : MonoBehaviour
             else
                 arButton.SetOn(false);
         }
-        SetPartsButton(remerasData);
+        switch(id)
+        {
+            case 0:
+                SetPartsButton(hatsData);
+                break;
+            case 1:
+                SetPartsButton(remerasData);
+                break;
+            case 2:
+                SetPartsButton(pantalonesData);
+                break;
+            case 3:
+                SetPartsButton(zapatillasData);
+                break;
+
+        }
     }
-
-
-
-    //PARTS:
     void SetPartsButton(PartData[] parts)
     {
         Utils.RemoveAllChildsIn(partButtonsContainer);
@@ -86,11 +101,8 @@ public class DressUI : MonoBehaviour
         }
         PartData pData = partButtons[id].partData;
         Utils.RemoveAllChildsIn(remeraContainer);
-        GameObject prefab = Instantiate( pData.prefab, remeraContainer);
-        //prefab.transform.localPosition = Vector3.zero;
+        GameObject prefab = Instantiate(pData.prefab, remeraContainer);
         prefab.transform.localScale = Vector3.one;
-
-        //SetColorButton(GetColorsFromPaleta(pData.paletaName));
     }
 
     Color[] GetColorsFromPaleta(string paletaName)
@@ -103,7 +115,6 @@ public class DressUI : MonoBehaviour
         Debug.LogError("No hay paleta para " + paletaName);
         return null;
     }
-
 
     public void OnPatternClicked(int id)
     {

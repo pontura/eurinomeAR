@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 7.1999817, y: 132.4}
+  m_AnchoredPosition: {x: 7.199951, y: 132.4}
   m_SizeDelta: {x: 306.98743, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &457336710
@@ -220,7 +220,7 @@ RectTransform:
   m_GameObject: {fileID: 1122973132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 3765097486687382473}
   m_Father: {fileID: 1597266395}
@@ -334,7 +334,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnMenuClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -604,9 +604,45 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
     prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
     paletaName: hats
-  remerasData: []
-  pantalonesData: []
-  zapatillasData: []
+  remerasData:
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  pantalonesData:
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  zapatillasData:
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
+  - sprite: {fileID: 21300000, guid: 5fb7794e8c31cad46b87e51f39a4bbed, type: 3}
+    prefab: {fileID: 5589481047622763711, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+    paletaName: hats
   partButton: {fileID: -4357402071030578401, guid: d25976d20eca9c54689b06e9f870b4df, type: 3}
   colorButton: {fileID: 4770321578005454667, guid: d79978917fbb9234785bde5978248225, type: 3}
   partButtons: []
@@ -1093,7 +1129,7 @@ MonoBehaviour:
     prefab: {fileID: 0}
     paletaName: 
   id: 0
-  isOn: {fileID: 0}
+  isOn: {fileID: 4565150903916355119}
   image: {fileID: 0}
   color: {r: 0.8745099, g: 0.8745099, b: 0.2509804, a: 1}
 --- !u!1 &434760611992372791
@@ -2260,7 +2296,7 @@ MonoBehaviour:
     prefab: {fileID: 0}
     paletaName: 
   id: 3
-  isOn: {fileID: 0}
+  isOn: {fileID: 3095158323264693797}
   image: {fileID: 0}
   color: {r: 0.33333334, g: 0.23137257, b: 0.5019608, a: 1}
 --- !u!1 &2575998728095449115
@@ -2433,7 +2469,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnPatternClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3034,7 +3070,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnPatternClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4339,7 +4375,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnPatternClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4746,7 +4782,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnPatternClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5046,7 +5082,7 @@ MonoBehaviour:
     prefab: {fileID: 0}
     paletaName: 
   id: 2
-  isOn: {fileID: 0}
+  isOn: {fileID: 3123105368759967776}
   image: {fileID: 0}
   color: {r: 0.82745105, g: 0.34509805, b: 0.33333334, a: 1}
 --- !u!1 &6293840758860105261
@@ -5480,7 +5516,7 @@ MonoBehaviour:
     prefab: {fileID: 0}
     paletaName: 
   id: 1
-  isOn: {fileID: 0}
+  isOn: {fileID: 8104236736100050100}
   image: {fileID: 0}
   color: {r: 0.23529413, g: 0.5019608, b: 0.69803923, a: 1}
 --- !u!1 &6976592409637377658
@@ -5578,7 +5614,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnMenuClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5702,7 +5738,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnMenuClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5826,7 +5862,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnMenuClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7333,7 +7369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 7.1999817, y: -77.7}
+  m_AnchoredPosition: {x: 7.199951, y: -77.7}
   m_SizeDelta: {x: 306.98743, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8627593575152324268
@@ -7431,7 +7467,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnPatternClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7555,7 +7591,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1791127383}
         m_TargetAssemblyTypeName: DressUI, Assembly-CSharp
-        m_MethodName: OnPartClicked
+        m_MethodName: OnPatternClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8000,6 +8036,14 @@ PrefabInstance:
     - target: {fileID: 6195683163163793446, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
       propertyPath: m_SizeDelta.y
       value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195683163163793446, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195683163163793446, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6195683163163793446, guid: 340e3a5f68a84554c92adce7db945b97, type: 3}
       propertyPath: m_LocalPosition.x
