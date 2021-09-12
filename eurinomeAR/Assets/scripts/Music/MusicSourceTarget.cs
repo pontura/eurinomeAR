@@ -25,6 +25,7 @@ public class MusicSourceTarget : MonoBehaviour
         ChangeValue(v);
 
         float vv = coord.y / Screen.height;
-        audioSource.pitch = pitchValue;
+
+        GetComponent<AudioSource>().pitch = pitchValue;
     }
 }

@@ -18,6 +18,8 @@ public class NotesManager : MonoBehaviour
     public Camera cam;
     public float timer;
     public float timeToAdd = 0.2f;
+
+    public List<NoteScript> saved;
     public List<NoteScript> all;
     public int noteID;
     public MusicSourceTarget msTarget;
@@ -37,17 +39,44 @@ public class NotesManager : MonoBehaviour
         Utils.RemoveAllChildsIn(container);
         timer = 0;
     }
+    //private void OnEnable()
+    //{
+    //    if(saved.Count==0)
+    //    {
+    //        foreach (NoteScript ns in all)
+    //        {
+    //            NoteScript newNote = new NoteScript();
+    //            newNote.Init(material, ns.pos);
+    //            saved.Add(newNote);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        all.Clear();
+    //        Utils.RemoveAllChildsIn(container);
+    //        foreach (NoteScript ns in saved)
+    //        {
+    //            NoteScript newNote = Instantiate(note, container);
+    //            newNote.Init(material, ns.pos);
+    //            all.Add(newNote);
+    //            newNote.transform.position = GetPosRayCast(ns.pos);
+    //        }
+    //    }
+    //}
+
+    Vector3 rayPos;
     void LateUpdate()
     {
+        if (!isActiveAndEnabled) return;
         if (isOn)
         {
-
-            if (Input.GetMouseButtonDown(0))
+            rayPos = GetPosRayCast(Input.mousePosition);
+            if (Input.GetMouseButtonDown(0) && rayPos != Vector3.zero)
             {
                 Reset();
                 Draw();
             }
-            else if (Input.GetMouseButton(0))
+            else if (Input.GetMouseButton(0) && rayPos != Vector3.zero)
             {
                 SavePoints();
             }
@@ -70,7 +99,7 @@ public class NotesManager : MonoBehaviour
         timer = 0;
 
         // Vector3 pos = GetPos();
-        Vector3 pos = GetPosRayCast();
+        Vector3 pos = GetPosRayCast(Input.mousePosition);
         if (pos != Vector3.zero)
         {
             NoteScript ns = Instantiate(note, container);
@@ -85,9 +114,9 @@ public class NotesManager : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(pos);
         return ray.GetPoint(51);
     }
-    Vector3 GetPosRayCast()
+    Vector3 GetPosRayCast(Vector2 pos)
     {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(pos);
 
         RaycastHit[] hits;
         hits = Physics.RaycastAll(ray, 10000.0F);

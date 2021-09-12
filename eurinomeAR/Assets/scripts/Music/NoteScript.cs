@@ -11,7 +11,7 @@ public class NoteScript : MonoBehaviour
     public void Init(Material mat, Vector2 pos)
     {
         this.pos = pos;
-        meshRenderer.material = mat;
+        if(meshRenderer != null)  meshRenderer.material = mat;
     }
     public void SetOn()
     {
