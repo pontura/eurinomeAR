@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1248,10 +1248,10 @@ RectTransform:
   m_Father: {fileID: 750874992}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -120}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230098209
 MonoBehaviour:
@@ -1267,8 +1267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 1572444485}
@@ -2184,10 +2183,10 @@ RectTransform:
   m_Father: {fileID: 750874992}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -120}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407297544
 MonoBehaviour:
@@ -2203,8 +2202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 93570457}
@@ -3970,10 +3968,10 @@ RectTransform:
   m_Father: {fileID: 750874992}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 120, y: -120}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788683480
 MonoBehaviour:
@@ -3989,8 +3987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 1231156708}
@@ -4095,10 +4092,10 @@ RectTransform:
   m_Father: {fileID: 750874992}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -40}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &819957995
 MonoBehaviour:
@@ -4114,8 +4111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 1581272133}
@@ -6159,9 +6155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f83c9b044c8bf941be1066369c0aa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 769802727}
-  type: 1
-  field: {fileID: 1258664293}
 --- !u!1 &1251356374
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,7 +8025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1548163247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8133,7 +8126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1560130978
 Transform:
   m_ObjectHideFlags: 0
@@ -8363,9 +8356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f83c9b044c8bf941be1066369c0aa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 2057558215}
-  type: 0
-  field: {fileID: 466879612}
 --- !u!1 &1576482794
 GameObject:
   m_ObjectHideFlags: 0
@@ -10059,10 +10049,10 @@ RectTransform:
   m_Father: {fileID: 750874992}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 120, y: -40}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900787836
 MonoBehaviour:
@@ -10078,8 +10068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 1288581468}
@@ -13035,8 +13024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 7336829177581926098}
@@ -16009,7 +15997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1548370594350686407
 Transform:
   m_ObjectHideFlags: 0
@@ -27969,10 +27957,10 @@ RectTransform:
   m_Father: {fileID: 750874992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -40}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1728021835784422220
 Animation:
@@ -31219,8 +31207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 3069945436532208807}
@@ -31239,8 +31226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 3069945436256915285}
@@ -31259,8 +31245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 3069945435980741491}
@@ -31279,8 +31264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 3069945435674422849}
@@ -31299,8 +31283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 3069945435787465102}
@@ -31319,8 +31302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 3069945435486914454}
@@ -31339,8 +31321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 3069945434634061527}
@@ -36807,9 +36788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f83c9b044c8bf941be1066369c0aa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 5253764558517859292}
-  type: 2
-  field: {fileID: 5253764558371449225}
 --- !u!1 &5253764558517859292
 GameObject:
   m_ObjectHideFlags: 0
@@ -42319,26 +42297,29 @@ MonoBehaviour:
   colorButtonsContainer: {fileID: 8168857407668894887}
   hatsData:
   - sprite: {fileID: 21300000, guid: 2e5fab31b2a9bf44889748fa20fe9ff2, type: 3}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: hats
   - sprite: {fileID: 21300000, guid: 735144cfa6379284ab1b20054d7dc945, type: 3}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: hats
   - sprite: {fileID: 21300000, guid: 043a2e36cbb9b1b44b238395d3336c33, type: 3}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: hats
   - sprite: {fileID: 21300000, guid: 253a248d9d8b0b145944374c5169da7e, type: 3}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: hats
+  remerasData: []
+  pantalonesData: []
+  zapatillasData: []
   partButton: {fileID: -4357402071030578401, guid: d25976d20eca9c54689b06e9f870b4df, type: 3}
   colorButton: {fileID: 4770321578005454667, guid: d79978917fbb9234785bde5978248225, type: 3}
   partButtons: []
   colorButtons: []
-  hat: {fileID: 476459656}
+  patternsButtons: []
+  hatContainer: {fileID: 0}
+  remeraContainer: {fileID: 0}
+  pantalonContainer: {fileID: 0}
+  zapatillaContainer: {fileID: 0}
   paletas:
   - paletaName: hats
     colors:
@@ -42518,9 +42499,9 @@ RectTransform:
   m_Father: {fileID: 8168857407169642295}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 114.450005, y: -37.17685}
   m_SizeDelta: {x: 76.3, y: 74.3537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8168857408655860237
@@ -42537,8 +42518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 1
   isOn: {fileID: 8168857409027212052}
@@ -42651,9 +42631,9 @@ RectTransform:
   m_Father: {fileID: 8168857407169642295}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 38.15, y: -37.17685}
   m_SizeDelta: {x: 76.3, y: 74.3537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8168857408708706230
@@ -42670,8 +42650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 0
   isOn: {fileID: 8168857408619551898}
@@ -42843,9 +42822,9 @@ RectTransform:
   m_Father: {fileID: 8168857407169642295}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 267.05002, y: -37.17685}
   m_SizeDelta: {x: 76.3, y: 74.3537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8168857408998126005
@@ -42862,8 +42841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 3
   isOn: {fileID: 8168857407055130479}
@@ -43126,9 +43104,9 @@ RectTransform:
   m_Father: {fileID: 8168857407169642295}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 190.75, y: -37.17685}
   m_SizeDelta: {x: 76.3, y: 74.3537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8168857409104302022
@@ -43145,8 +43123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partData:
     sprite: {fileID: 0}
-    sr: {fileID: 0}
-    image: {fileID: 0}
+    prefab: {fileID: 0}
     paletaName: 
   id: 2
   isOn: {fileID: 8168857407412056938}
