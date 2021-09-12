@@ -16,6 +16,10 @@
 		{
 			"id":"PLAY_BUTTON_SPORTS",
 			"text": "ApretApretá rítmicamente para correr"
+		},
+		{
+			"id":"INITIAL_TIP_DRESS",
+			"text":"Prendas para vestir al avatar en el espejo"
 		}
 	]
 }

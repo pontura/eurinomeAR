@@ -7,6 +7,7 @@ using System;
 public class DressUI : MonoBehaviour
 {
     public int id;
+    public Animation character;
     public PartUIButton[] buttons;
     public Transform partButtonsContainer;
     public Transform colorButtonsContainer;
@@ -46,10 +47,12 @@ public class DressUI : MonoBehaviour
     private void OnEnable()
     {
         OnMenuClicked(0);
+        Events.OnTip(TipController.types.INITIAL_TIP, GamesManager.Instance.texts.GetText("INITIAL_TIP_DRESS"), true);
     }
 
     public void OnMenuClicked(int id)
     {
+        Events.OnTip(TipController.types.INITIAL_TIP, "", false);
         this.id = id;
         foreach (PartUIButton arButton in buttons)
         {
@@ -92,6 +95,8 @@ public class DressUI : MonoBehaviour
     }
     public void OnPartClicked(int id)
     {
+        Events.OnTip(TipController.types.INITIAL_TIP, "", false);
+        OnChange();
         foreach (PartUIButton partButton in partButtons)
         {
             if (partButton.id == id)
@@ -118,7 +123,7 @@ public class DressUI : MonoBehaviour
 
     public void OnPatternClicked(int id)
     {
-        print("OnPatternClicked");
+        OnChange();
         PartUIButton p = null;
         foreach (PartUIButton cButton in patternsButtons)
         {
@@ -157,7 +162,7 @@ public class DressUI : MonoBehaviour
     //}
     public void OnColorClicked(int id)
     {
-        print("OnColorClicked");
+        OnChange();
         foreach (ColorUIButton cButton in colorButtons)
         {
             if (cButton.id == id)
@@ -167,5 +172,10 @@ public class DressUI : MonoBehaviour
         }
         Color color = colorButtons[id].color;
         remeraContainer.GetComponentInChildren<Image>().color = color;
+    }
+    private void OnChange()
+    {
+        Events.PlaySound("ui", "select", false);
+        character.Play();
     }
 }

@@ -12,6 +12,7 @@ public class GamesManager : MonoBehaviour
     }
     public GameObject joystickPanel;
     public AnalogicKnob analogicKnob;
+    public TextsManager texts;
 
     private void Awake()
     {

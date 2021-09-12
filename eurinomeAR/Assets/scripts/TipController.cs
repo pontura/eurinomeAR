@@ -12,7 +12,8 @@ public class TipController : MonoBehaviour
     {
         PLAY_BUTTON,
         JOYSTICK,
-        NAVE_LEVELS
+        NAVE_LEVELS,
+        INITIAL_TIP
     }
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class TipController : MonoBehaviour
             field.text = text;
             panel.SetActive(isOn);
         }
+        Events.PlaySound("ui", "tip", false);
     }
     void OnTipTimout(types _type, string text, int timer)
     {
@@ -39,6 +41,7 @@ public class TipController : MonoBehaviour
             field.text = text;
             Invoke("Reset", timer);
         }
+        Events.PlaySound("ui", "tip", false);
     }
     void Reset()
     {

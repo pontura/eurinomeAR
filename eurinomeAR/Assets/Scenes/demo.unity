@@ -3797,6 +3797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystickPanel: {fileID: 724820421}
   analogicKnob: {fileID: 781511723}
+  texts: {fileID: 2068731513}
 --- !u!114 &2068731512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4115,6 +4116,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2068731510}
     m_Modifications:
+    - target: {fileID: 1770266547463114381, guid: 1cefc74b66530084ab622976e89a39ee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770266547463114381, guid: 1cefc74b66530084ab622976e89a39ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685864254064442381, guid: 1cefc74b66530084ab622976e89a39ee, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685864254064442381, guid: 1cefc74b66530084ab622976e89a39ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685864254064442381, guid: 1cefc74b66530084ab622976e89a39ee, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238858806583222899, guid: 1cefc74b66530084ab622976e89a39ee, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8168857408901698997, guid: 1cefc74b66530084ab622976e89a39ee, type: 3}
       propertyPath: m_Name
       value: DressUp
