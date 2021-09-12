@@ -16,6 +16,9 @@ public class VideogameObstacle : MonoBehaviour
         this.obstacles = obstacles;
         explotion.gameObject.SetActive(false);
         RefreshStats();
+
+        if (Random.Range(0, 10) < 5)
+            transform.localScale = new Vector3(transform.localScale.x*-1, transform.localScale.y, transform.localScale.z);
     }
     public void RefreshStats()
     {
@@ -24,6 +27,8 @@ public class VideogameObstacle : MonoBehaviour
         foreach (GameObject go in assets)
             go.SetActive(false);
         assets[data.level - 1].SetActive(true);
+        Animation anim = GetComponentInChildren<Animation>();
+        if(anim != null)  GetComponentInChildren<Animation>().Play("obstacle" + data.level);
     }
     void Update()
     {
@@ -48,7 +53,12 @@ public class VideogameObstacle : MonoBehaviour
     }
     void DestroyAsset()
     {
-        GetComponent<Collider2D>().enabled = false;
+        Events.PlaySound("common", "explosion", false);
+        if (GetComponentInChildren<Collider2D>())
+        {
+            GetComponentInChildren<Collider2D>().enabled = false;
+            explotion.transform.position = GetComponentInChildren<Collider2D>().transform.position;
+        }
         explotion.Init(End, 0.1f);
         asset.SetActive(false);
     }

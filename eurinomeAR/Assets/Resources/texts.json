@@ -1,0 +1,21 @@
+﻿{
+	"all":
+	[
+		{
+			"id":"NAVE_LEVELS",
+			"text": "Usa estos botones para cambiar de nivel!"
+		},
+		{
+			"id":"PLAY_BUTTON_VIDEOGAME",
+			"text": "Apretá para jugar!"
+		},
+		{
+			"id":"JOYSTICK",
+			"text": "Usa para moverte"
+		},
+		{
+			"id":"PLAY_BUTTON_SPORTS",
+			"text": "ApretApretá rítmicamente para correr"
+		}
+	]
+}
