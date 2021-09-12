@@ -39,21 +39,18 @@ public class Sports : MonoBehaviour
         lines[0].Init("Velovidad", 0);
         lines[1].Init("Resistencia", 1);
         lines[2].Init("Ritmo Cardíaco", 0);
-      //  lines[3].Init("Pulso", 0);
+        lines[3].Init("Pulso", 0);
         initTime = Time.time;
     }
     void OnEnable()
     {
-        Events.PlaySound("common", "breath0", true);
         Events.OnJoystickPressed += OnJoystickPressed;
         Events.ShowJoystick(true);
         SetRotation(0);
         characterAnims.SetSpeed(0);
-        Events.OnTip(TipController.types.PLAY_BUTTON, "Apretá rítmicamente para correr", true);
     }
-    private void OnDisable()
+        private void OnDisable()
     {
-        Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
         Events.OnJoystickPressed -= OnJoystickPressed;
         Events.ShowJoystick(false);
     }
@@ -67,7 +64,6 @@ public class Sports : MonoBehaviour
     }
     void OnJoystickPressed()
     {
-        Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
         speed += aceleration;
         anim.Play();
     }
@@ -104,7 +100,7 @@ public class Sports : MonoBehaviour
         SetRotation();
 
         characterAnims.SetSpeed(speed);
-        SetBreath();
+
         SetSpeed();
         SetResistencia();
         SetRitmo();
@@ -161,37 +157,5 @@ public class Sports : MonoBehaviour
     {
         dist += speed * distFactor;
         distanceField.text = (int)dist + "m";
-    }
-
-    int breathID = -1;
-    int lastBreath;
-    float lastChange = 0;
-    void SetBreath()
-    {
-        lastChange += Time.deltaTime;
-        if (lastChange < 2) return;
-        if (speedReal > bestSpeed.x && speedReal < bestSpeed.y)
-        {
-            breathID = 1;
-        }
-        else if (speedReal > bestSpeed.y)
-        {
-            breathID = 2;
-        }
-        else if (speedReal < bestSpeed.x)
-        {
-            breathID = 0;
-        }
-        else if(speedReal == 0)
-            breathID = -1;
-
-        if (lastBreath == breathID)
-            return;
-        lastChange = 0;
-        lastBreath = breathID;
-        if (breathID == -1)
-            Events.PlaySound("common", "", false);
-        else
-            Events.PlaySound("common", "breath" + breathID, true);
     }
 }

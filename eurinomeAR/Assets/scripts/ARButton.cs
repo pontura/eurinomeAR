@@ -21,7 +21,6 @@ public class ARButton : MonoBehaviour
             Debug.LogError("No hace nada este boton");
             return; 
         }
-        Events.PlaySound("ui", "click", false);
         this.OnClicked(id);
         SetOn(true);
     }

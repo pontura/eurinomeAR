@@ -12,27 +12,24 @@ public class VideogameNave : MonoBehaviour
     public PngSequenceAnim explotion;
     public GameObject asset;
     public Transform targetToMove;
-    int totalShots;
+   // public Camera cam;
+    bool canFire = true;
 
-    public void Init()
+    private void Start()
     {
         asset.SetActive(true);
         explotion.gameObject.SetActive(false);
     }
+
     public void Fire()
     {
-        float shoots_in_screen = videogame.stats.Get().shoots_in_screen;
-        if (totalShots >= shoots_in_screen) return;
-
-        totalShots++;
-        print("totalShots: " + totalShots + " shoots_in_screen: " + shoots_in_screen);
-
+        if (!canFire) return;
         VideogameFire f = Instantiate(fire, transform.parent);
         f.Init(this, fireSpeed);
         Vector2 pos = transform.localPosition;
         pos.y += 50;
         f.transform.localPosition = pos;
-        Events.PlaySound("common", "naveGun", false);
+        canFire = false;
     }
     private void Update()
     {
@@ -43,28 +40,48 @@ public class VideogameNave : MonoBehaviour
             if (pos.x < -x_offset) pos.x = -x_offset;
             if (pos.x > x_offset) pos.x = x_offset;
             transform.localPosition = pos;
+            //float _target_x;
+
+            //if (targetToMove != null)
+            //    _target_x = cam.WorldToScreenPoint(targetToMove.position).x;
+            //else
+            //    _target_x = Input.mousePosition.x;
+
+            //float _x = (_target_x - (Screen.width / 2)) / (Screen.width / 4f);
+
+
+            //Vector2 pos = transform.localPosition;
+            //float to = _x * x_offset;
+
+  
+
+            //pos.x = Mathf.Lerp(pos.x, to, 0.05f);
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    Fire();
+            //}
         }
         
     }
     public void ResetShoot()
     {
-        totalShots--;
+        canFire = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        VideogameObstacle obstacle = collision.gameObject.GetComponentInParent<VideogameObstacle>();
+        VideogameObstacle obstacle = collision.gameObject.GetComponent<VideogameObstacle>();
         if (obstacle != null)
         {
             obstacle.OnFired();
             asset.gameObject.SetActive(false);
             explotion.Init(OnDone);
             videogame.OnGameOver();
-            Events.PlaySound("common", "explosion", false);
         }
     }
-    public void OnDone()
+    void OnDone()
     {
-        videogame.Restart();
+        asset.gameObject.SetActive(true);
+        videogame.Init();
     }
 
 }

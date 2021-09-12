@@ -10,6 +10,8 @@ public class CharacterAnims : MonoBehaviour
 
     public void SetSpeed(float speed)
     {
+        print("SetSpeed " + speed);
+
         int newSpeed = 0;
         if (speed == 0)
             newSpeed = 0;

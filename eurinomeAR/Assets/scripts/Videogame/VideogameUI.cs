@@ -22,7 +22,7 @@ public class VideogameUI : MonoBehaviour
             b.Init(id, OnClick);
             id++;
         }
-        OnClick(0);
+        buttons[0].OnButtonClick();
     }
 
     void OnClick(int id)

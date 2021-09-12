@@ -12,7 +12,6 @@ public class VideogameObstacles : MonoBehaviour
 
     public void Init(Videogame videogame)
     {
-        CancelInvoke();
         this.videogame = videogame;
         Loop();
     }
@@ -24,8 +23,7 @@ public class VideogameObstacles : MonoBehaviour
     void Loop()
     {
         Invoke("Loop", 1/videogame.stats.Get().density);
-        if(videogame.state == Videogame.states.PLAYING)
-            Add();
+        Add();
     }
     void Add()
     {
