@@ -36,7 +36,7 @@ public class Sports : MonoBehaviour
     void Start()
     {
         InitPlaying();
-        lines[0].Init("Velovidad", 0);
+        lines[0].Init("Velocidad", 0);
         lines[1].Init("Resistencia", 1);
         lines[2].Init("Ritmo Cardíaco", 0);
       //  lines[3].Init("Pulso", 0);
@@ -49,7 +49,7 @@ public class Sports : MonoBehaviour
         Events.ShowJoystick(true);
         SetRotation(0);
         characterAnims.SetSpeed(0);
-        Events.OnTip(TipController.types.PLAY_BUTTON, "Apretá rítmicamente para correr", true);
+        Events.OnTip(TipController.types.PLAY_BUTTON, GamesManager.Instance.texts.GetText("PLAY_BUTTON_SPORTS"), true);
         Events.PlaySound("music", "music_sports", true);
     }
     private void OnDisable()
