@@ -20,6 +20,14 @@
 		{
 			"id":"INITIAL_TIP_DRESS",
 			"text":"Prendas para vestir al avatar en el espejo"
+		},
+		{
+			"id":"MUSIC_1",
+			"text": "Dibujá melodías! en el pentagrama"
+		},
+		{
+			"id":"MUSIC_2",
+			"text":"Dibujá ritmo! en el pentagrama"
 		}
 	]
 }

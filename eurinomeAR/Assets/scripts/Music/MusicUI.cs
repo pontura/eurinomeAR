@@ -27,9 +27,15 @@ public class MusicUI : MonoBehaviour
             id = 1;
         SetButtons();
         if (id == 1)
+        {
+            Events.OnTipTimout(TipController.types.MUSIC_1, GamesManager.Instance.texts.GetText("MUSIC_1"), 2);
             anim.Play("toggle1");
+        }
         else
+        {
+            Events.OnTipTimout(TipController.types.MUSIC_2, GamesManager.Instance.texts.GetText("MUSIC_2"), 2);
             anim.Play("toggle2");
+        }
     }
     public void OnPointerDown()
     {

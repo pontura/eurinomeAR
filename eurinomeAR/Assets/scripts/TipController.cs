@@ -13,7 +13,9 @@ public class TipController : MonoBehaviour
         PLAY_BUTTON,
         JOYSTICK,
         NAVE_LEVELS,
-        INITIAL_TIP
+        INITIAL_TIP,
+        MUSIC_1,
+        MUSIC_2
     }
     private void Awake()
     {
