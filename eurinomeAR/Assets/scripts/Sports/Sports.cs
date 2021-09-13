@@ -50,12 +50,14 @@ public class Sports : MonoBehaviour
         SetRotation(0);
         characterAnims.SetSpeed(0);
         Events.OnTip(TipController.types.PLAY_BUTTON, "Apretá rítmicamente para correr", true);
+        Events.PlaySound("music", "music_sports", true);
     }
     private void OnDisable()
     {
         Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
         Events.OnJoystickPressed -= OnJoystickPressed;
         Events.ShowJoystick(false);
+        Events.PlaySound("music", "", true);
     }
     public void Init()
     {
