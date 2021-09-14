@@ -10,6 +10,7 @@ public class MusicUI : MonoBehaviour
     NotesManager[] notesManager;
     Animation anim;
     public MusicTrail[] trails;
+    public AudioSpectrum[] audioSpectrum;
 
     public int id = 1; 
 
@@ -18,6 +19,11 @@ public class MusicUI : MonoBehaviour
         anim = GetComponent<Animation>();
         OnPresetClicked(0);
         SetButtons();
+        Invoke("Delayed", 2);
+    }
+    void Delayed()
+    {
+        Events.OnTipTimout(TipController.types.MUSIC_3, GamesManager.Instance.texts.GetText("MUSIC_3"), 10);
     }
     public void OnToogle()
     {
@@ -72,5 +78,7 @@ public class MusicUI : MonoBehaviour
             ns.musicTrail = trails[_id];
             _id++;
         }
+        audioSpectrum[0].SetOn(notesManager[0].GetComponent<AudioSource>());
+        audioSpectrum[1].SetOn(notesManager[1].GetComponent<AudioSource>());
     }
 }

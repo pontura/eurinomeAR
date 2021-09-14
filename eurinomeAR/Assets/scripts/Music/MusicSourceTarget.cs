@@ -8,7 +8,7 @@ public class MusicSourceTarget : MonoBehaviour
     AudioSource audioSource;
     float pitchValue = 1;
     float volumeValue = 1;
-    public float pitchFactor = 0.2f;
+    public float pitchFactor = 0.25f;
     public float volumeFactor = 1.5f;
 
     void Start()

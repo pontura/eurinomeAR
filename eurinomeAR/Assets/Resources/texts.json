@@ -23,11 +23,15 @@
 		},
 		{
 			"id":"MUSIC_1",
-			"text": "Dibujá melodías! en el pentagrama"
+			"text": "Dibujá melodías! en la compu"
 		},
 		{
 			"id":"MUSIC_2",
-			"text":"Dibujá ritmo! en el pentagrama"
+			"text":"Dibujá ritmo! en la compu"
+		},
+		{
+			"id":"MUSIC_3",
+			"text":"¡Dibujá tu Música!"
 		},
 		{
 			"id":"pista_1",

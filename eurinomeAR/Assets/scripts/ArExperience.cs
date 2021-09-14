@@ -16,6 +16,11 @@ public class ArExperience : MonoBehaviour
     public ARButton playButton;
     bool playClicked;
 
+    private void OnEnable()
+    {
+        Init(); // para debug:
+    }
+
     public void Init()
     {        
         GotoIntro();
@@ -32,6 +37,7 @@ public class ArExperience : MonoBehaviour
     }
     public void GotoGame()
     {
+        Events.PlaySpecificSound(null);
         // closeButton.gameObject.SetActive(true);
         state = states.GAME;
         intro.SetActive(false);

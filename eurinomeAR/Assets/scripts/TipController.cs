@@ -15,7 +15,8 @@ public class TipController : MonoBehaviour
         NAVE_LEVELS,
         INITIAL_TIP,
         MUSIC_1,
-        MUSIC_2
+        MUSIC_2,
+        MUSIC_3
     }
     private void Awake()
     {
@@ -25,6 +26,11 @@ public class TipController : MonoBehaviour
     {
         Events.OnTip += OnTip;
         Events.OnTipTimout += OnTipTimout;
+    }
+    void OnDestroy()
+    {
+        Events.OnTip -= OnTip;
+        Events.OnTipTimout -= OnTipTimout;
     }
     void OnTip(types _type, string text, bool isOn)
     {
@@ -44,6 +50,10 @@ public class TipController : MonoBehaviour
             Invoke("Reset", timer);
         }
         Events.PlaySound("ui", "tip", false);
+    }
+    private void OnDisable()
+    {
+        CancelInvoke();
     }
     void Reset()
     {

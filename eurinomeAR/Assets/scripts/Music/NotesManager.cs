@@ -19,7 +19,6 @@ public class NotesManager : MonoBehaviour
     public float timer;
     public float timeToAdd = 0.2f;
 
-    public List<NoteScript> saved;
     public List<NoteScript> all;
     public int noteID;
     public MusicSourceTarget msTarget;
@@ -39,33 +38,9 @@ public class NotesManager : MonoBehaviour
         Utils.RemoveAllChildsIn(container);
         timer = 0;
     }
-    //private void OnEnable()
-    //{
-    //    if(saved.Count==0)
-    //    {
-    //        foreach (NoteScript ns in all)
-    //        {
-    //            NoteScript newNote = new NoteScript();
-    //            newNote.Init(material, ns.pos);
-    //            saved.Add(newNote);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        all.Clear();
-    //        Utils.RemoveAllChildsIn(container);
-    //        foreach (NoteScript ns in saved)
-    //        {
-    //            NoteScript newNote = Instantiate(note, container);
-    //            newNote.Init(material, ns.pos);
-    //            all.Add(newNote);
-    //            newNote.transform.position = GetPosRayCast(ns.pos);
-    //        }
-    //    }
-    //}
-
     Vector3 rayPos;
-    void LateUpdate()
+    bool canDraw;
+    void Update()
     {
         if (!isActiveAndEnabled) return;
         if (isOn)
@@ -73,15 +48,18 @@ public class NotesManager : MonoBehaviour
             rayPos = GetPosRayCast(Input.mousePosition);
             if (Input.GetMouseButtonDown(0) && rayPos != Vector3.zero)
             {
+                canDraw = true;
                 Reset();
                 Draw();
             }
             else if (Input.GetMouseButton(0) && rayPos != Vector3.zero)
             {
-                SavePoints();
+                if(canDraw)
+                    SavePoints();
             }
             else if (Input.GetMouseButtonUp(0))
             {
+                canDraw = false;
                 Done();
             }
         }

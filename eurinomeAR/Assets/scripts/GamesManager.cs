@@ -16,7 +16,8 @@ public class GamesManager : MonoBehaviour
     public AnalogicKnob analogicKnob;
     public TextsManager texts;
     public ConfigPanel configs;
-    public VuforiaBehaviour vuforiaBehavior;   
+    public VuforiaBehaviour vuforiaBehavior;
+    public Particlescontainer particlesContainer;
 
     public enum states
     {

@@ -46,9 +46,14 @@ public class AudioManager : MonoBehaviour
     }
     void PlaySpecificSound(AudioClip audioClip)
     {
-        AudioSource audioSource = GetAudioSource("common"); if (audioSource == null) return;
-        audioSource.clip = audioClip;
-        audioSource.Play();
+        AudioSource audioSource = GetAudioSource("common"); if (audioSource == null)  return;
+        if (audioClip == null)
+            audioSource.Stop();
+        else
+        {
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
     }
     void PlaySound(string sourceName, string audioName, bool loop)
     {

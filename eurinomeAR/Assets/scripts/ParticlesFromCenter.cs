@@ -15,27 +15,29 @@ public class ParticlesFromCenter : MonoBehaviour
     public Vector3 camOffset;
     public float delay = 1;
     public float delaySmall = 1f;
-    Transform container;
 
     private void Start()
     {
-        container = GameObject.Find("particlesContainer").transform;
         all.Clear();
         cam = Camera.main;
     }
     void OnEnable()
     {
-        container = GameObject.Find("particlesContainer").transform;
-        container.gameObject.SetActive(true);
-        Utils.RemoveAllChildsIn(container);
+        Invoke("Delayed", 0.5f);
+    }
+    void Delayed()
+    {
+        GamesManager.Instance.particlesContainer.gameObject.SetActive(true);
+        Utils.RemoveAllChildsIn(GamesManager.Instance.particlesContainer.transform);
         if (particles.Length > 0)
             Add();
-        if(smallParticles.Length>0)
+        if (smallParticles.Length > 0)
             Invoke("AddSmall", delaySmall);
+
     }
     private void OnDisable()
     {
-        container.gameObject.SetActive(false);
+        GamesManager.Instance.particlesContainer.gameObject.SetActive(false);
         CancelInvoke();
         all.Clear();
     }
@@ -43,7 +45,7 @@ public class ParticlesFromCenter : MonoBehaviour
     {
         Invoke("Add", delay);
         VideogameParticle vp = Instantiate(particles[Random.Range(0, particles.Length)], transform);
-        vp.transform.SetParent(container);
+        vp.transform.SetParent(GamesManager.Instance.particlesContainer.transform);
         vp.transform.localScale = new Vector3(from_to_scale.x, from_to_scale.x, from_to_scale.x);
         all.Add(vp);
     }
@@ -51,7 +53,7 @@ public class ParticlesFromCenter : MonoBehaviour
     {
         Invoke("AddSmall", delaySmall);
         VideogameParticle vp = Instantiate(smallParticles[Random.Range(0, smallParticles.Length)], transform);
-        vp.transform.SetParent(container);
+        vp.transform.SetParent(GamesManager.Instance.particlesContainer.transform);
         vp.transform.localScale = new Vector3(from_to_scale.x, from_to_scale.x, from_to_scale.x);
         all.Add(vp);
     }
