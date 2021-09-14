@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LeoLuz.PlugAndPlayJoystick;
+using Vuforia;
+using UnityEngine.XR;
 
 public class GamesManager : MonoBehaviour
 {
@@ -13,6 +15,16 @@ public class GamesManager : MonoBehaviour
     public GameObject joystickPanel;
     public AnalogicKnob analogicKnob;
     public TextsManager texts;
+    public ConfigPanel configs;
+    public VuforiaBehaviour vuforiaBehavior;   
+
+    public enum states
+    {
+        INTRO,
+        RA,
+        END
+    }
+    public states state;
 
     private void Awake()
     {
@@ -31,5 +43,9 @@ public class GamesManager : MonoBehaviour
     public void OnJoystickPressed()
     {
         Events.OnJoystickPressed();
+    }
+    public void SetVuforiaOn(bool isOn)
+    {
+        vuforiaBehavior.enabled = isOn;
     }
 }

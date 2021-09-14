@@ -8,15 +8,34 @@ public class ConfigPanel : MonoBehaviour
     public GameObject panel;
     bool isOpen;
     public ArExperience[] games;
-    public InputField scaleField;
-    float scale = 100;
+    public InputField[] scaleInputfields;
+    public InputField[] durationsInputfields;
+    public List<int> durations;
+    public GameObject scalesContainer;
+    public GameObject durationContainer;
     public bool forceInitActive;
 
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         Close();
-        scaleField.text = scale.ToString();
-        if(forceInitActive)
+        int id = 0;
+        scaleInputfields = scalesContainer.GetComponentsInChildren<InputField>();
+        foreach (InputField f in scaleInputfields)
+        {
+            string t = PlayerPrefs.GetString("scale_" + id, "100");
+            f.text = t;
+            id++;
+        }
+        id = 0;
+        durationsInputfields = durationContainer.GetComponentsInChildren<InputField>();
+        foreach (InputField f in durationsInputfields)
+        {
+            f.text = PlayerPrefs.GetString("duration_" + id, f.text);
+            id++;
+            durations.Add(int.Parse(f.text));
+        }
+        if (forceInitActive)
         {
             foreach (ArExperience a in games)
                 if (a.isActiveAndEnabled)
@@ -70,11 +89,25 @@ public class ConfigPanel : MonoBehaviour
         lastIdFound = id;
     }
     public void SetScale()
-    {
-        float scale = float.Parse(scaleField.text);
+    {        
+        int id = 0;
         foreach (ArExperience arExperience in games)
         {
+            float scale = float.Parse(scaleInputfields[id].text);
+            PlayerPrefs.SetString("scale_" + id, scale.ToString());
             arExperience.transform.localScale = new Vector3(scale/100, scale/100, scale / 100);
+            id++;
+        }
+    }
+    public void SaveDurations()
+    {
+        durations.Clear();
+        int id = 0;
+        foreach (InputField f in durationsInputfields)
+        {
+            PlayerPrefs.SetString("duration_" + id, f.text.ToString());
+            durations.Add(int.Parse(f.text));
+            id++;
         }
     }
 }

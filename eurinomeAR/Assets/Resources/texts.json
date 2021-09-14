@@ -28,6 +28,54 @@
 		{
 			"id":"MUSIC_2",
 			"text":"Dibujá ritmo! en el pentagrama"
+		},
+		{
+			"id":"pista_1",
+			"text":"¡Hola! Bienvenides a esta experiencia inmersiva sobre tecnología que preparamos para vos. Soy Fifí, activista LGBTQIA+ y de la inclusión de personas de este colectivo en el mundo de la programación y la tecnología, y voy a estar guiándote a partir de ahora. ¿Vamos?"
+		},
+		{
+			"id":"pista_2",
+			"text":"Esta es una habitación parecida a la tuya, ¿no? No por el orden precisamente...pero seguro vas a encontrar cosas que vos también tenés en casa. Sin embargo, hay algo que hace que esta habitación sea especial, única..."
+		},
+		{
+			"id":"pista_3",
+			"text":"Música, indumentaria, deportes, videojuegos... Estos son los universos que te proponemos que investigues. Con la tablet que tenés en tus manos, vas a poder leer los QR que hay en la habitación y descubrir lo que pasa con cada uno. ¡Acercate a los códigos y probá! Dale, ¡no pierdas tiempo!"
+		},
+		{
+			"id":"tip1",
+			"text":"Acercate al código y con la cámara, encuadrá –como si fuera una foto–"
+		},
+		{
+			"id":"tip2",
+			"text":"Podés mover la cámara cerca del QR y experimentar el 3D"
+		},
+		{
+			"id":"tip3",
+			"text":"En la tablet, vas a encontrar las instrucciones para jugar"
+		},
+		{
+			"id":"tip4",
+			"text":"¡Vamos, que queda poco tiempo!"
+		},
+		{
+			"id":"pista_4",
+			"text":"¿¡Viste que la tecnología está en todas partes y se nos presenta de formas muy diferentes!? Existen muchas herramientas y posibilidades para aplicarla a las cosas que más te gustan. Ahora que viste de qué se trata cada tema, ¡elegí el que más te gustó y apretá el botón!"
+		},
+		{
+			"id":"pista_5",
+			"text":"No hace falta que te diga que sin las computadoras no existirían los videojuegos. No sólo porque las usamos para jugarlos, sino porque son necesarias para algo muchísimo más importante: ¡para diseñarlos y construirlos! Los videojuegos son programas enormes –compuestos por muchas instrucciones– que las computadoras tienen que seguir para crear los escenarios, personajes y sonidos que nosotros luego vemos en la pantalla mientras jugamos."
+		},
+		{
+			"id":"pista_6",
+			"text":"Pero esta tecnología no se hace sola. Todos los dispositivos que conocemos son máquinas que siguen instrucciones humanas. Esto quiere decir que, tanto computadoras como programas, están hechos por personas. ¡Vos también podés aprender y crear estas herramientas!"
+		},
+		{
+			"id":"pista_7",
+			"text":"<Escuchá la experiencia>"
+		},
+		{
+			"id":"pista_8",
+			"text":"Pss, pss, ¿seguís ahí? Perdón que te interrumpa, ya se que estás pensando en todas las cosas que podés hacer con la tecnología –ahora que sabés que se puede aplicar a todo lo que te gusta– pero es momento de ceder el turno."
 		}
 	]
 }
