@@ -108,11 +108,22 @@ public class DressUI : MonoBehaviour
                 partButton.SetOn(false);
         }
         PartData pData = partButtons[id].partData;
-        Utils.RemoveAllChildsIn(remeraContainer);
-        GameObject prefab = Instantiate(pData.prefab, remeraContainer);
+        Transform container = Getcontainer(partButtons[id].partData.paletaName);
+        Utils.RemoveAllChildsIn(container);
+        GameObject prefab = Instantiate(pData.prefab, container);
         prefab.transform.localScale = Vector3.one;
+        prefab.transform.localPosition = Vector3.zero;
     }
-
+    Transform Getcontainer(string name)
+    {
+        switch(name)
+        {
+            case "hats": return hatContainer;
+            case "zapas": return zapatillaContainer;
+            case "remera": return remeraContainer;
+            default: return pantalonContainer;
+        }
+    }
     Color[] GetColorsFromPaleta(string paletaName)
     {
         foreach (PaletasData pData in paletas)
