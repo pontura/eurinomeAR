@@ -23,12 +23,16 @@ public class VideogameObstacle : MonoBehaviour
     public void RefreshStats()
     {
         VideogameStats.StatData data = obstacles.videogame.stats.Get();
-        speed = data.speed;
+        SetSpeed(data.speed);
         foreach (GameObject go in assets)
             go.SetActive(false);
         assets[data.level - 1].SetActive(true);
         Animation anim = GetComponentInChildren<Animation>();
         if(anim != null)  GetComponentInChildren<Animation>().Play("obstacle" + data.level);
+    }
+    public void SetSpeed(float _speed)
+    {
+        speed = _speed;
     }
     void Update()
     {

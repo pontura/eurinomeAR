@@ -41,13 +41,13 @@ public class Videogame : MonoBehaviour
     }
     void OnEnable()
     {
-        Events.OnJoystickPressed += OnJoystickPressed;
+       // Events.OnJoystickPressed += OnJoystickPressed;
         Events.ShowJoystick(true);
         Events.OnTip(TipController.types.PLAY_BUTTON, "Apretá para jugar!", true);
     }
     private void OnDisable()
     {
-        Events.OnJoystickPressed -= OnJoystickPressed;
+      //  Events.OnJoystickPressed -= OnJoystickPressed;
         Events.ShowJoystick(false);
     }
     void Init()
@@ -64,7 +64,7 @@ public class Videogame : MonoBehaviour
         CancelInvoke();
         Events.OnTipTimout(TipController.types.NAVE_LEVELS, "Usa estos botones para cambiar de nivel!", 4);
     }
-    void OnJoystickPressed()
+    public void OnJoystickPressed()
     {
         if (state == states.PLAYING)
             nave.Fire();

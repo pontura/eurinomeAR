@@ -23,6 +23,7 @@ public class VideogameObstacles : MonoBehaviour
     }
     void Loop()
     {
+        print("Loop" + videogame.state + (1 / videogame.stats.Get().density));
         Invoke("Loop", 1/videogame.stats.Get().density);
         if(videogame.state == Videogame.states.PLAYING)
             Add();
@@ -42,7 +43,6 @@ public class VideogameObstacles : MonoBehaviour
     }
     public void Reset()
     {
-        print("RESET");
         int i = obstacles.Count;
         while(i>0)
         {
@@ -54,7 +54,19 @@ public class VideogameObstacles : MonoBehaviour
     }
     public void ChangeStats()
     {
+        int i = obstacles.Count;
+        while (i > 0)
+        {
+            VideogameObstacle o = obstacles[i - 1];
+            o.OnFired();
+            i--;
+        }
+        //foreach (VideogameObstacle o in obstacles)
+        //    o.RefreshStats();
+    }
+    public void SetSpeed(float speed)
+    {
         foreach (VideogameObstacle o in obstacles)
-            o.RefreshStats();
+            o.SetSpeed(speed);
     }
 }

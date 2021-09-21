@@ -66,5 +66,8 @@ public class VideogameNave : MonoBehaviour
     {
         videogame.Restart();
     }
-
+    public void SetSpeed(float normalized_speed)
+    {
+        speed = 1000 + ((normalized_speed - 0.5f) * 700);
+    }
 }

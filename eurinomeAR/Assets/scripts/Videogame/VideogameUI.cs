@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class VideogameUI : MonoBehaviour
 {
-    public ARButton[] buttons;
+    public Toggle[] buttons;
     public Videogame videogame;
     public Text scoreField;
     public VideogameStats stats;
     int score = 0;
+    public Text speedXField;
+    public Slider speedY;
+    public Slider speedX;
 
     void Start()
     {
@@ -17,24 +20,33 @@ public class VideogameUI : MonoBehaviour
             return;
         score = 0;
         int id = 0;
-        foreach(ARButton b in buttons)
-        {
-            b.Init(id, OnClick);
-            id++;
-        }
         OnClick(0);
     }
-
-    void OnClick(int id)
+    public void OnClick(int id)
     {
-        foreach (ARButton b in buttons)
-        {
-            if (b.id == id)
-                b.SetOn(true);
-            else
-                b.SetOn(false);
-        }
+        if (!buttons[id].isOn) return;
+
+        speedY.value = 0;
         stats.SetStat(id);
+        OnRefreshSpeed();
+        int _id = 0;
+        foreach (Toggle b in buttons)
+        {
+            if (_id == id)
+                b.isOn = true;
+            else
+                b.isOn = false;
+            _id++;
+        }
+    }
+    public void OnRefreshSpeed()
+    {
+        stats.SetSpeed(speedY.value);
+    }
+    public void OnRefreshSpeedX()
+    {
+        videogame.nave.SetSpeed(speedX.value);
+        speedXField.text = (speedX.value * 1000) + " km/h";
     }
     public void AddScore(int qty)
     {

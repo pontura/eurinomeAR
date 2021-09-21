@@ -12,6 +12,8 @@ public class VideogameStats : MonoBehaviour
     public Videogame videogame;
     public GameObject levelSignal;
     public Text levelSignalField;
+    public float multiplier = 20;
+    public Text speedYFField;
 
     [Serializable]
     public class StatData
@@ -30,9 +32,9 @@ public class VideogameStats : MonoBehaviour
     public void SetStat(int active)
     {
         levelSignal.SetActive(true);
+        SetSpeed(0);
         this.active = active;
         SetFields(fields[0], "NIVEL", all[active].level.ToString());
-        SetFields(fields[1], "VELOCIDAD", all[active].speed.ToString());
         SetFields(fields[2], "DENSIDAD", all[active].density.ToString());
         SetFields(fields[3], "RESISTENCIA", all[active].qty_shots.ToString());
         SetFields(fields[4], "DISPAROS", all[active].shoots_in_screen.ToString());
@@ -40,6 +42,14 @@ public class VideogameStats : MonoBehaviour
         videogame.obstacles.ChangeStats();
         levelSignalField.text = "NIVEL "+ all[active].level.ToString();
         levelSignal.GetComponent<Animation>().Play();
+    }
+    public int newSpeed;
+    public void SetSpeed(float acceleration)
+    {
+        newSpeed = (int)(all[active].speed + (acceleration * multiplier));
+        videogame.obstacles.SetSpeed(newSpeed);
+        SetFields(fields[1], "VELOCIDAD", newSpeed.ToString());
+        speedYFField.text = newSpeed.ToString();
     }
     void SetFields(GameObject go, string text1, string text2)
     {
