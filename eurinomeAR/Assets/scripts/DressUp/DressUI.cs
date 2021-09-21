@@ -53,6 +53,7 @@ public class DressUI : MonoBehaviour
     {
         Events.OnTip(TipController.types.INITIAL_TIP, GamesManager.Instance.texts.GetText("INITIAL_TIP_DRESS"), true);
     }
+    Transform container;
     public void OnMenuClicked(int id)
     {
         Events.OnTip(TipController.types.INITIAL_TIP, "", false);
@@ -78,7 +79,6 @@ public class DressUI : MonoBehaviour
             case 3:
                 SetPartsButton(zapatillasData);
                 break;
-
         }
     }
     void SetPartsButton(PartData[] parts)
@@ -108,11 +108,13 @@ public class DressUI : MonoBehaviour
                 partButton.SetOn(false);
         }
         PartData pData = partButtons[id].partData;
-        Transform container = Getcontainer(partButtons[id].partData.paletaName);
+        container = Getcontainer(partButtons[id].partData.paletaName);
         Utils.RemoveAllChildsIn(container);
         GameObject prefab = Instantiate(pData.prefab, container);
         prefab.transform.localScale = Vector3.one;
         prefab.transform.localPosition = Vector3.zero;
+        OnPattern(patternId);
+        OnColor(colorId);
     }
     Transform Getcontainer(string name)
     {
@@ -135,9 +137,15 @@ public class DressUI : MonoBehaviour
         return null;
     }
 
+    int patternId;
     public void OnPatternClicked(int id)
     {
+        this.patternId = id;
         OnChange();
+        OnPattern(id);
+    }
+    void OnPattern(int id)
+    {
         PartUIButton p = null;
         foreach (PartUIButton cButton in patternsButtons)
         {
@@ -149,12 +157,11 @@ public class DressUI : MonoBehaviour
             else
                 cButton.SetOn(false);
         }
-        Image[] all = remeraContainer.GetComponentsInChildren<Image>();
+        Image[] all = container.GetComponentsInChildren<Image>();
         print(all.Length);
         print(p);
         all[2].sprite = p.partData.sprite;
     }
-
 
     ////COLORS:
     //void SetColorButton(Color[] colors)
@@ -174,8 +181,16 @@ public class DressUI : MonoBehaviour
     //        pButton.SetOn(false);
     //    }
     //}
+    int colorId;
     public void OnColorClicked(int id)
     {
+        this.colorId = id;
+        OnChange();
+        OnColor(id);
+    }
+    public void OnColor(int id)
+    {
+        this.colorId = id;
         OnChange();
         foreach (ColorUIButton cButton in colorButtons)
         {
@@ -185,7 +200,7 @@ public class DressUI : MonoBehaviour
                 cButton.SetOn(false);
         }
         Color color = colorButtons[id].color;
-        remeraContainer.GetComponentInChildren<Image>().color = color;
+        container.GetComponentInChildren<Image>().color = color;
     }
     private void OnChange()
     {

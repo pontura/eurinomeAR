@@ -9375,6 +9375,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4664914614769102177, guid: 14a95913f446be4418d7010f03e2475c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664914614769102177, guid: 14a95913f446be4418d7010f03e2475c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 41.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14a95913f446be4418d7010f03e2475c, type: 3}
 --- !u!224 &3033032828197909407 stripped
@@ -9609,6 +9617,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6145041759742976908, guid: 04dd54168e656ee44b7c21cd2dae136f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dd79b79bf1bdb341aedef00673cd8df, type: 3}
     - target: {fileID: 6195683163163793446, guid: 04dd54168e656ee44b7c21cd2dae136f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10245,6 +10257,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3563799558315882812, guid: 051a37269838b034f83f55eb7aef60fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db716b6e0143d864a8bdbdef0ac71afe, type: 3}
     - target: {fileID: 3587617655706108566, guid: 051a37269838b034f83f55eb7aef60fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10328,6 +10344,14 @@ PrefabInstance:
     - target: {fileID: 3587617655706108566, guid: 051a37269838b034f83f55eb7aef60fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664914614769102177, guid: 051a37269838b034f83f55eb7aef60fb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664914614769102177, guid: 051a37269838b034f83f55eb7aef60fb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 41.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051a37269838b034f83f55eb7aef60fb, type: 3}
