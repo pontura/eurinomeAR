@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: 7014f7c1d15426442bbccf7b5c2892a3
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_copy135_DARK_GRAY_MATTEMat
+    second: {fileID: 2100000, guid: b3063651e699a1e4491650347b19e8e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_copy136_100_copy136_auvMat
+    second: {fileID: 2100000, guid: 8f02d80841cee75429c00d617706ae94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_copy137_100_copy137_auvMat
+    second: {fileID: 2100000, guid: e15e13bf75ef9ca49978d9eee9a8417b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep100_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 681d135fbe941334ab6bda5d9dfac3d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep101_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 104175fc2825f3147877a5d18cb0a37e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep102_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: bac47b5060e7ccb448dbf1cec20c53ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep103_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 4484545bab7225444af2f19e4d753065, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep104_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: c97a4fc038ec8594981083b4a60b58d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep105_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 56cd6c0910124784e98c650185563caa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep106_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 521f7d80b28f3934ab714928c607ebe2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep107_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 24bbde8a5a34df94899c35b3d37b54d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep108_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 91d105ef03b62b5468044592960089f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep109_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 8881622169eb17b45baf5c84d27a869d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep10_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 28ab9c7116b998c4589667f798d4e44b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep110_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 5d672aa9c58f6164ba55e2330619401c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep111_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: c8b48226de14535488b7464f79f6be0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep112_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 2c688a0667352f54caaaa029d55945e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep113_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 3014a8ad644555a4594624037175f571, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep114_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 8614d2261d69a4e4e9201d5732fdebd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep115_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 894b8ae41267c454bb81e9d8823e4a20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep116_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 4711f1aadd61d4f42805a66df4fbf381, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep117_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 5c0f893c8033c92478f04c74c72bf85d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep119_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 48b195ff6d59bc444878beb820f37d0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep11_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 1e25b09dcdb643c4b978a861441dca3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep120_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 06cad7ef3fe8c5040aae02c9bd84630e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep121_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: c17435cc12ef7e244b4b8389bda24134, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep122_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 777d77c72b9b2734cbac0994a4ef56aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep123_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 7b56dc4370830bf4aa9cf812e25af8b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep124_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: a1076e36a34858a469274c5a7cb248d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep125_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 013365b3cc9ae8a498bb159696b74596, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep126_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: e50bcb24256760947bf14b29ee750ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep127_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: f06c4f35da9b6e546a3a0f0ae26b7298, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep128_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 6e0c7ba91454d354792cd7c9d8bbd816, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep129_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: e5a6c0761e661d542b510ba8f8a1853e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep12_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 4df42db092dfdf14cb3604fa0da465be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep130_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 8a00b595a23e80040abe9038bdcaa1d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep13_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 578f1206abc56d64b9973f74f2cafdfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep14_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 098aeaee912ec0c419a82e3d656c4968, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep15_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 2c79327c56dbcdb4f980e02d6ab52bdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep16_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: cd87e90cf13e39d48a3ca7049ba226cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep17_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 9fd559780fd6ca7499670591b3371ebb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep18_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 13ba92b420b90684b9cf7fefb93b344e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep19_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 13d78b57029158c48b95f6a7d5181027, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep34_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: ce2b17cf16e1c0943b05b15ef69e13c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep35_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 0ad1a0f0f21f39a4e90bbfa794dc16fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep36_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 890207acc2db10445af01ad294dfedba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep37_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 6a1324bef8aa12f4ea47cc2e2fbd2f81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep38_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: e60d065269950804192084f65f615786, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep39_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 86792e5bcaccbe44cb00a5f2dc32ed11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep40_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 9411145e884b9e4459ec52c1922e3d63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep41_DARK_GRAY_MATTEMat
+    second: {fileID: 2100000, guid: 85ab95355aacb9049b1c2dae08f288f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep43_100_sep43_auvMat
+    second: {fileID: 2100000, guid: b3957d45f70d4ff419f2817e73c205dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep45_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: d9cbae5f6b939d04484b151f39681237, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep46_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 35147d68218d04343aad2cb43e70d272, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep47_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 164ee7af518644f4dbee94eca97b5bb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep48_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 1ab315fc26303504382decf1390483b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep49_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 6ed76cdd28f77fa4a9312e553ec03cdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep50_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 8722b6a29f66caf4887b1ceb69e5d1dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep51_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: c1636a0de7d8b544286fc24f49dc969e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep52_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 947ac6aad25a84c4989f35d986db2d89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep53_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: b23172572acedda4c9ce87be3a8784af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep54_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: cd4a6ecefd7f4d34e91ba62e11c6d118, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep55_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: a07d3a4a623a61f478b4caa07aeacae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep56_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 88336515e473d1143a1a0feb989b0592, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep57_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 529ba32109af1ec40bc5413381322299, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep58_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: d148b65f672a9744b8366e4ee2e58bd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep59_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 0683b429ba0daf04a840cfe87f678f15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep60_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: ba6b9fe59221c3140bd6aa94c573c11a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep61_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 0dc5da7ed434f194badc5f06a2f937ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep62_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 90b3b2d720b47994daec0c9eae50c7cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep63_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: d9e420371f9526747bd824cc3b08f536, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep64_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 3ad0932ad23908f44bbe45509b0516ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep65_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: e700031a84843f54785485413f023ebe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep66_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 298b831a9f78b0d44947618192597930, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep67_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: f40f7a1a27f9f524cb0aa501340e7da8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep68_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 8f8ee8d923b2a484db04b39931028f11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep69_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: e58f84d66585fe9439bdf6f5c1ce6807, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep70_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 5adc60040c4544b4d93e38ccfc5806ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep71_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 6863c6efe41e0334cb05e3778272fce7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep72_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 3f3d05fe37f89e042b538efd6216e871, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep73_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: f365ed886fc48cd498f375b4277c4d28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep74_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 6c035502aa546e841ac696db4bdd9dac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep75_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: f4073eaa272b23542988970108c9968e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep76_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: a61361c4ffbe7054397fb545f6fe1baf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep77_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 8cd227da29608e2449777c9a9812fcf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep78_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: c20e81b0bedea0d409feb1f958ee98b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep79_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: c40a4cb2e88d00547a817aaf28cded96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep80_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 18a54148a3aaf7345b6f19afb5481724, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep81_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 4ad846a135de0fb4ea67d8e64ef28e12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep82_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 13bf67ac893f46b4d92f09a33bb0af7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep83_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: a8a520efb727a4342b532217b492d9a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep84_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 89334829f69c0854d8ff1df21022332a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep85_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: f82eeb35e5d97a946a52fc7b022452c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep86_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 68a70741bd4188247ac633312f0a1132, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep87_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 05d8391316dc8064295d92f9bb2d3b08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep88_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 6b3f494950637da4aba2f3c85c177279, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep89_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: c270cfaa863d3c9439705b73d36df366, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep8_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: ed75d6d4a2211314fae5e864f02f3759, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep90_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 43aedfeebc2fd224589c040f1428e372, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep91_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 00bedb2063e819f439e7e02c29891ac7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep92_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 59d5705261f8a3449ba4e16c9ad5708d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep93_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 6c9feca0fa24b4e45bd1774cd2676397, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep94_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: a8108813929eee0419eb5b3511d4964b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep95_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 22dd92a15f11f084d9bedc91246bd300, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep96_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 3efaf59893cfc7a4189ab9a9b8d702a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep97_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 8480561686c7df142b06471d409ee184, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep98_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: 88ccacd205f296645aa19acd9ead6ac8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep99_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: a93fabf2774c1b045808d77470eb1897, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 100_sep9_WHITE_PLASTICMat
+    second: {fileID: 2100000, guid: c9f3c08b75d8678419c3b21632052021, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cube134_copy117_cube134_sep116_auvMat
+    second: {fileID: 2100000, guid: d4ed4e8d04463034c9a3b78046addc19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cube134_cube134_auvMat
+    second: {fileID: 2100000, guid: 8ebddea101a5271459b990246af12afd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cube134_sep116_cube134_sep116_auvMat
+    second: {fileID: 2100000, guid: 631b5b52d4593d247824e4a2c73712f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cylinder118_BLACK_PLASTICMat
+    second: {fileID: 2100000, guid: 099e48a658c555e4b8209c7c628f113a, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
