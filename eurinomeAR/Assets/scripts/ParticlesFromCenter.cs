@@ -74,7 +74,7 @@ public class ParticlesFromCenter : MonoBehaviour
                 _scale = from_to_scale.y;
             v.transform.localScale = new Vector3(_scale, _scale, _scale);
             v.timer += Time.deltaTime;
-            if (v.timer > 7)
+            if (v.timer > 8)
                 toRemove = v;
         }
         if(toRemove != null)

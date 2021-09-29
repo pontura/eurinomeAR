@@ -43,6 +43,10 @@ public class Videogame : MonoBehaviour
     {
        // Events.OnJoystickPressed += OnJoystickPressed;
         Events.ShowJoystick(true);
+        Invoke("Delayed", 0.5f);
+    }
+    void Delayed()
+    {
         Events.OnTip(TipController.types.PLAY_BUTTON, "Apretá para jugar!", true);
     }
     private void OnDisable()
@@ -70,6 +74,7 @@ public class Videogame : MonoBehaviour
             nave.Fire();
         else if (state == states.IDLE)
             InitGame();
+        Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
     }
     public void OnGameOver()
     {
