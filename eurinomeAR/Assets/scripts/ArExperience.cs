@@ -15,6 +15,7 @@ public class ArExperience : MonoBehaviour
    // public ARButton closeButton;
     public ARButton playButton;
     public bool playClicked;
+    public GameMain gameMain;
 
     void OnEnable()
     {
@@ -74,5 +75,10 @@ public class ArExperience : MonoBehaviour
     void DoAction()
     {
         GetComponentInParent<ArExperience>().GotoGame();
+    }
+    public void Reset()
+    {
+        playClicked = false;
+        gameMain.Reset();
     }
 }

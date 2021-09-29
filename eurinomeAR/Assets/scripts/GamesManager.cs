@@ -49,4 +49,9 @@ public class GamesManager : MonoBehaviour
     {
         vuforiaBehavior.enabled = isOn;
     }
+    public void Reset()
+    {
+        foreach (ArExperience are in configs.games)
+            are.Reset();
+    }
 }

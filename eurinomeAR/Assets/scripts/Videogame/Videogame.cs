@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Videogame : MonoBehaviour
+public class Videogame : GameMain
 {
     public VideogameNave nave;
     public VideogameObstacles obstacles;
@@ -19,9 +19,9 @@ public class Videogame : MonoBehaviour
         PLAYING,
         GAME_OVER
     }
-    void Start()
+    public override void Reset()
     {
-        //Intro();
+        base.Reset();
     }
     public void InitGame()
     {

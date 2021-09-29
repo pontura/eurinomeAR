@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Sports : MonoBehaviour
+public class Sports : GameMain
 {
     public states state;
     public Vector2 bestSpeed;
@@ -32,6 +32,10 @@ public class Sports : MonoBehaviour
         IDLE,
         PLAYING,
         GAME_OVER
+    }
+    public override void Reset()
+    {
+        base.Reset();
     }
     void Start()
     {

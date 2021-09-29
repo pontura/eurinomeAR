@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class DressUI : MonoBehaviour
+public class DressUI : GameMain
 {
     public int id;
     public Animation character;
@@ -44,6 +44,10 @@ public class DressUI : MonoBehaviour
     }
     public PaletasData[] paletas;
 
+    public override void Reset()
+    {
+        base.Reset();
+    }
     private void OnEnable()
     {
         OnMenuClicked(0);

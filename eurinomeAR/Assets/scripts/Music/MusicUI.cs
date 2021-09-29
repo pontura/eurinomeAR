@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MusicUI : MonoBehaviour
+public class MusicUI : GameMain
 {
     public GameObject[] presets;
     public Transform container;

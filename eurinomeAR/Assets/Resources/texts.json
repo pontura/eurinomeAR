@@ -2,6 +2,10 @@
 	"all":
 	[
 		{
+			"id": "WELCOME_TO_GAME",
+			"text": "¡Jugar!"
+		},
+		{
 			"id":"NAVE_LEVELS",
 			"text": "Usa estos botones para cambiar de nivel!"
 		},

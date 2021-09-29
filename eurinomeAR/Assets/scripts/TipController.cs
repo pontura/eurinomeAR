@@ -16,11 +16,25 @@ public class TipController : MonoBehaviour
         INITIAL_TIP,
         MUSIC_1,
         MUSIC_2,
-        MUSIC_3
+        MUSIC_3,
+        INTRO
     }
     private void Awake()
     {
         panel.SetActive(false);
+    }
+    private void OnEnable()
+    {
+        if(type == types.INTRO)
+        {
+            panel.SetActive(false);
+            Invoke("ShowIntro", 2);
+        }
+    }
+    void ShowIntro()
+    {
+        print("ShowIntro");
+        OnTip(TipController.types.INTRO, GamesManager.Instance.texts.GetText("WELCOME_TO_GAME"), true);
     }
     void Start()
     {
@@ -35,10 +49,12 @@ public class TipController : MonoBehaviour
     void OnTip(types _type, string text, bool isOn)
     {
         if (type == _type)
-        {
-            field.text = text;
-            panel.SetActive(isOn);
-        }
+            ShowTip(text, isOn);
+    }
+    void ShowTip(string text, bool isOn)
+    {
+        field.text = text;
+        panel.SetActive(isOn);
         Events.PlaySound("ui", "tip", false);
     }
     void OnTipTimout(types _type, string text, int timer)
