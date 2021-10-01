@@ -23,7 +23,7 @@ public class ConfigPanel : MonoBehaviour
         scaleInputfields = scalesContainer.GetComponentsInChildren<InputField>();
         foreach (InputField f in scaleInputfields)
         {
-            string t = PlayerPrefs.GetString("scale_" + id, "100");
+            string t = PlayerPrefs.GetString("scale_" + id, "50");
             f.text = t;
             id++;
         }
@@ -61,7 +61,6 @@ public class ConfigPanel : MonoBehaviour
     }
     public void OnTargetHide(int id)
     {
-        print("____OnTargetHide__ " + id);
         int thisID = 0;
         foreach (ArExperience arExperience in games)
         {

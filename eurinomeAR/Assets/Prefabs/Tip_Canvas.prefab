@@ -498,8 +498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d0ed4cded04a74088e76c6468b1249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipID: VIDEOJUEGOS_TIP_1
-  answer: VIDEOJUEGOS_ANSWER_1
+  tipID: MUSICA_TIP_1
+  answer: MUSICA_ANSWER_1
   field: {fileID: 6897327333384408839}
   answerField: {fileID: 6897327334412453320}
   button: {fileID: 6897327334018975187}

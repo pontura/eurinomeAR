@@ -14,6 +14,14 @@
 			"text": "Es un concepto básico en el diseño de juegos. Representa la evolución del aprendizaje del jugador y el reto que plantea un juego. No es nada sencilla de balancear y es una tarea metódica que requiere mucha práctica y, sobre todo, mucho testeo del juego."
 		},
 		{
+			"id": "MUSICA_TIP_1",
+			"text": "¿Sabés qué pasa si cambias la frecuencia de onda de un sonido?"
+		},
+		{
+			"id": "MUSICA_ANSWER_1",
+			"text": "Cambias el tono. Que es una de las cuatro cualidades esenciales del sonido, junto con la duración, la intensidad y el timbre. Determina si un sonido es agudo o grave. ¿Querés expermientar con esto?"
+		},
+		{
 			"id":"NAVE_LEVELS",
 			"text": "Usa estos botones para cambiar de nivel!"
 		},
