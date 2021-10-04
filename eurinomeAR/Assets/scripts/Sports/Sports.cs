@@ -41,6 +41,7 @@ public class Sports : GameMain
     {
         InitPlaying();
         lines[0].Init("Velocidad", 0);
+        lines[3].Init("Velocidad", 0);
         lines[1].Init("Resistencia", 1);
         lines[2].Init("Ritmo Cardíaco", 0);
       //  lines[3].Init("Pulso", 0);
@@ -49,17 +50,19 @@ public class Sports : GameMain
     void OnEnable()
     {
         Events.PlaySound("common", "breath0", true);
-        Events.OnJoystickPressed += OnJoystickPressed;
         Events.ShowJoystick(true);
         SetRotation(0);
+        Invoke("Delayed", 0.15f);
         characterAnims.SetSpeed(0);
-        Events.OnTip(TipController.types.PLAY_BUTTON, GamesManager.Instance.texts.GetText("PLAY_BUTTON_SPORTS"), true);
         Events.PlaySound("music", "music_sports", true);
+    }
+    void Delayed()
+    {
+        Events.OnTip(TipController.types.PLAY_BUTTON, GamesManager.Instance.texts.GetText("PLAY_BUTTON_SPORTS"), true);
     }
     private void OnDisable()
     {
         Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
-        Events.OnJoystickPressed -= OnJoystickPressed;
         Events.ShowJoystick(false);
         Events.PlaySound("music", "", true);
     }
@@ -71,7 +74,7 @@ public class Sports : GameMain
     {
         state = states.PLAYING;
     }
-    void OnJoystickPressed()
+    public void OnJoystickPressed()
     {
         Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
         speed += aceleration;
@@ -123,6 +126,7 @@ public class Sports : GameMain
         speedReal = (int)(maxRealSpeed * normalizedSpeed);
         string fieldValue = speedReal.ToString() + "km/h";
         lines[0].SetValue(fieldValue, normalizedSpeed,  activeColor);
+        lines[3].SetValue(fieldValue, normalizedSpeed, activeColor);
 
     }
     public float resistenciaValue;
