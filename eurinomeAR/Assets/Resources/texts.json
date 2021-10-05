@@ -6,6 +6,10 @@
 			"text": "¡Jugar!"
 		},
 		{
+			"id": "RITMO_SPORTS",
+			"text": "Mantené el ritmo constante"
+		},		
+		{
 			"id": "VIDEOJUEGOS_TIP_1",
 			"text": "¿Sabés qué es una curva de aprendizaje en videojuegos?"
 		},

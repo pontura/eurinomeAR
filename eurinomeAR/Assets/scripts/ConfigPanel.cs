@@ -14,7 +14,12 @@ public class ConfigPanel : MonoBehaviour
     public GameObject scalesContainer;
     public GameObject durationContainer;
     public bool forceInitActive;
+    public GameObject qrPanelFilm;
 
+    private void Awake()
+    {
+        qrPanelFilm.SetActive(false);
+    }
     void Start()
     {
         PlayerPrefs.DeleteAll();
@@ -61,6 +66,7 @@ public class ConfigPanel : MonoBehaviour
     }
     public void OnTargetHide(int id)
     {
+        qrPanelFilm.SetActive(true);
         int thisID = 0;
         foreach (ArExperience arExperience in games)
         {
@@ -72,6 +78,7 @@ public class ConfigPanel : MonoBehaviour
     int lastIdFound = -1;
     public void OnTargetFound(int id)
     {
+        qrPanelFilm.SetActive(false);
         int thisID = 0;
         print("OnTargetFound " + id);
         foreach (ArExperience arExperience in games)

@@ -27,6 +27,10 @@ public class Sports : GameMain
     public Color wrongColor;
     public Color activeColor;
 
+    bool madeWrongRythm;
+    bool joystickPressed;
+    bool onWrongRythm;
+
     public enum states
     {
         IDLE,
@@ -36,6 +40,10 @@ public class Sports : GameMain
     public override void Reset()
     {
         base.Reset();
+        madeWrongRythm = false;
+        onWrongRythm = false;
+        joystickPressed = false;
+        progressbar.fillAmount = 0;
     }
     void Start()
     {
@@ -49,7 +57,7 @@ public class Sports : GameMain
     }
     void OnEnable()
     {
-        Events.PlaySound("common", "breath0", true);
+        Events.PlaySound("bg", "breath0", true);
         Events.ShowJoystick(true);
         SetRotation(0);
         Invoke("Delayed", 0.15f);
@@ -76,6 +84,7 @@ public class Sports : GameMain
     }
     public void OnJoystickPressed()
     {
+        joystickPressed = true;
         Events.OnTip(TipController.types.PLAY_BUTTON, "", false);
         speed += aceleration;
         anim.Play();
@@ -90,11 +99,21 @@ public class Sports : GameMain
         {
             progressValue += progressSpeedValue * Time.deltaTime;
             activeColor = okColor;
+            if (onWrongRythm)
+                ResetWrongRythm();
         }
         else
         {
             activeColor = wrongColor;
             progressValue -= progressSpeedValue * Time.deltaTime;
+            if(!madeWrongRythm && joystickPressed)
+            {
+                print(":______________RITMO_SPORTS");
+                Events.OnTip(TipController.types.RITMO_SPORTS, GamesManager.Instance.texts.GetText("RITMO_SPORTS"), true);
+                madeWrongRythm = true;
+                onWrongRythm = true;
+                Invoke("ResetWrongRythm", 4);
+            }
         }
         if (progressValue < 0)
             progressValue = 0;
@@ -118,6 +137,12 @@ public class Sports : GameMain
         SetResistencia();
         SetRitmo();
         SetDistance();
+    }
+    void ResetWrongRythm()
+    {
+        CancelInvoke();
+        Events.OnTip(TipController.types.RITMO_SPORTS, "", false);
+        onWrongRythm = false;
     }
     float normalizedSpeed = 1;
     void SetSpeed()
@@ -200,8 +225,8 @@ public class Sports : GameMain
         lastChange = 0;
         lastBreath = breathID;
         if (breathID == -1)
-            Events.PlaySound("common", "", false);
+            Events.PlaySound("bg", "", false);
         else
-            Events.PlaySound("common", "breath" + breathID, true);
+            Events.PlaySound("bg", "breath" + breathID, true);
     }
 }

@@ -17,7 +17,8 @@ public class TipController : MonoBehaviour
         MUSIC_1,
         MUSIC_2,
         MUSIC_3,
-        INTRO
+        INTRO,
+        RITMO_SPORTS
     }
     private void Awake()
     {
