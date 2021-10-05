@@ -73,9 +73,10 @@ public class ConfigPanel : MonoBehaviour
     public void OnTargetFound(int id)
     {
         int thisID = 0;
+        print("OnTargetFound " + id);
         foreach (ArExperience arExperience in games)
         {
-            if (thisID == id)
+            if (thisID == id-1)
             {
                 arExperience.SetOn(true);
                 if (id != lastIdFound)
