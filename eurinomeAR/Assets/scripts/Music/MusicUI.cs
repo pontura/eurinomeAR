@@ -17,7 +17,7 @@ public class MusicUI : GameMain
     void Start()
     {
         anim = GetComponent<Animation>();
-        OnPresetClicked(0);
+        OnPresetClicked(3);
         SetButtons();
         Invoke("Delayed", 2);
     }

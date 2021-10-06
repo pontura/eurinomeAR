@@ -70,7 +70,7 @@ public class ConfigPanel : MonoBehaviour
         int thisID = 0;
         foreach (ArExperience arExperience in games)
         {
-            if (thisID == id)
+            if (thisID == id-1)
                 arExperience.SetOn(false);
             thisID++;
         }

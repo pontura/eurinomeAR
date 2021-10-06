@@ -20,24 +20,29 @@ public class ArExperience : MonoBehaviour
     void OnEnable()
     {
         Init();
+        print("empty");
     }
-
+    void OnDisable()
+    {
+        Animation anim = intro.GetComponent<Animation>();
+        anim.Play("empty");
+    }
     public void Init()
     {
         print("SI playClicked: " + playClicked);
         if (!playClicked)
+        {
+            Animation anim = intro.GetComponent<Animation>();
+            anim.Play("empty");
             GotoIntro();
+        }
         else
             GotoGame();
-        // closeButton.Init(0, OnClose);
         playButton.Init(1, OnButtonclicked);
-    }
-    void OnClose(int id)
-    {
-        GotoIntro();
     }
     public void SetOn(bool isOn)
     {
+        print("setOn" + isOn + " go name: " + this.gameObject.name);
         gameObject.SetActive(isOn);
     }
     public void GotoGame()
@@ -58,8 +63,7 @@ public class ArExperience : MonoBehaviour
     public void GotoIntro()
     {
         Animation anim = intro.GetComponent<Animation>();
-        if (anim != null)
-            anim.Play();
+        anim.Play("intro");
         playClicked = false;
         // closeButton.gameObject.SetActive(false);
         state = states.INTRO;

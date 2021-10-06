@@ -15,7 +15,7 @@ public class TipIntro : MonoBehaviour
 
     void OnEnable()
     {
-        GetComponent<Animation>().Play("introTipAppear");
+        GetComponent<Animation>().Play("IntroTipAppear");
         field.text = GamesManager.Instance.texts.GetText(tipID);
         answerField.text = GamesManager.Instance.texts.GetText(answer);
         answerField.enabled = false;
