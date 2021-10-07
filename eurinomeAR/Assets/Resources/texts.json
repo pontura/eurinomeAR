@@ -7,7 +7,7 @@
 		},
 		{
 			"id": "RITMO_SPORTS",
-			"text": "Mantené el ritmo constante"
+			"text": "¡Mantené el ritmo de forma constante!"
 		},		
 		{
 			"id": "VIDEOJUEGOS_TIP_1",
@@ -15,63 +15,59 @@
 		},
 		{
 			"id": "VIDEOJUEGOS_ANSWER_1",
-			"text": "Es un concepto básico en el diseño de juegos. Representa la evolución del aprendizaje del jugador y el reto que plantea un juego. No es nada sencilla de balancear y es una tarea metódica que requiere mucha práctica y, sobre todo, mucho testeo del juego."
+			"text": "Es un concepto básico en el diseño de juegos. Representa la evolución del aprendizaje del jugador y el reto que plantea un juego. Es una tarea metódica que requiere mucha práctica y, sobre todo, mucho testeo del juego."
 		},
 		{
 			"id": "MUSICA_TIP_1",
-			"text": "¿Sabés qué pasa si cambias la frecuencia de onda de un sonido?"
+			"text": "¿Sabés qué pasa al cambiar la frecuencia de onda de un sonido?"
 		},
 		{
 			"id": "MUSICA_ANSWER_1",
-			"text": "Cambias el tono. Que es una de las cuatro cualidades esenciales del sonido, junto con la duración, la intensidad y el timbre. Determina si un sonido es agudo o grave. ¿Querés expermientar con esto?"
+			"text": "Cambias el tono, que es una de las cuatro cualidades esenciales del sonido, junto con la duración, la intensidad y el timbre. ¿Querés expermientar con esto?"
 		},
 		{
 			"id": "DRESS_TIP_1",
-			"text": "¿Sabés qué pasa si cambias la frecuencia de onda de un sonido?"
+			"text": "¿Sabés que es la ropa inteligente?"
 		},
 		{
 			"id": "DRESS_ANSWER_1",
-			"text": "Cambias el tono. Que es una de las cuatro cualidades esenciales del sonido, junto con la duración, la intensidad y el timbre. Determina si un sonido es agudo o grave. ¿Querés expermientar con esto?"
+			"text": "Son dispositivos electrónicos inteligentes incorporados a la vestimenta. Tiene muchos usos en el area de la moda, ¡abriendo un abanico de posibilidades y juego en cada prenda!"
 		},
 		{
 			"id": "SPORTS_TIP_1",
-			"text": "¿Sabés qué pasa si cambias la frecuencia de onda de un sonido?"
+			"text": "¿Sabés qué beneficios tiene la tecnología en el deporte?"
 		},
 		{
 			"id": "SPORTS_ANSWER_1",
-			"text": "Cambias el tono. Que es una de las cuatro cualidades esenciales del sonido, junto con la duración, la intensidad y el timbre. Determina si un sonido es agudo o grave. ¿Querés expermientar con esto?"
+			"text": "La tecnología puede analizar nuestro rendimiento deportivo e incluso ayudarnos a evitar lesiones. Esto lo hace gracias a los datos que se pueden obtener con diferentes dispositivos."
 		},
 		{
 			"id":"NAVE_LEVELS",
-			"text": "Usa estos botones para cambiar de nivel!"
+			"text": "¡Usá estos botones para cambiar de nivel!"
 		},
 		{
 			"id":"PLAY_BUTTON_VIDEOGAME",
-			"text": "Apretá para jugar!"
+			"text": "¡Apretá para jugar!"
 		},
 		{
 			"id":"JOYSTICK",
-			"text": "Usa para moverte"
+			"text": "Usá este joystick para moverte"
 		},
 		{
 			"id":"PLAY_BUTTON_SPORTS",
-			"text": "Apretá rítmicamente para correr"
+			"text": "¡Apretá varias veces para empezar a correr!"
 		},
 		{
 			"id":"INITIAL_TIP_DRESS",
-			"text":"Prendas para vestir al avatar en el espejo"
+			"text":"¡Estas son prendas para vestir al muñeco!"
 		},
 		{
 			"id":"MUSIC_1",
-			"text": "Dibujá melodías! en la compu"
+			"text": "¡Dibujá melodías en el pentagrama!"
 		},
 		{
 			"id":"MUSIC_2",
-			"text":"Dibujá ritmo! en la compu"
-		},
-		{
-			"id":"MUSIC_3",
-			"text":"¡Dibujá tu Música!"
+			"text":"¡Dibujá tu música!"
 		},
 		{
 			"id":"pista_1",
