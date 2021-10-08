@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
         Events.PlaySpecificSoundInArray += PlaySpecificSoundInArray;
         Events.PlaySound += PlaySound;
         Events.ChangeVolume += ChangeVolume;
+        Events.ExitQR += ExitQR;
         foreach (AudioSourceManager m in all)
         {
             m.audioSource = gameObject.AddComponent<AudioSource>();
@@ -31,6 +32,7 @@ public class AudioManager : MonoBehaviour
         Events.PlaySpecificSoundInArray -= PlaySpecificSoundInArray;
         Events.ChangeVolume -= ChangeVolume;
         Events.PlaySound -= PlaySound;
+        Events.ExitQR -= ExitQR;
     }
     void ChangeVolume(string sourceName, float volume)
     {
@@ -38,6 +40,13 @@ public class AudioManager : MonoBehaviour
         {
             if (m.sourceName == sourceName)
                 m.audioSource.volume = volume;
+        }
+    }
+    void ExitQR()
+    {
+        foreach (AudioSourceManager m in all)
+        {
+            m.audioSource.Stop();
         }
     }
     void PlaySpecificSoundInArray(AudioClip[] allClips)

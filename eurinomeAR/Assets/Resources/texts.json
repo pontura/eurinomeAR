@@ -70,6 +70,10 @@
 			"text":"¡Dibujá tu música!"
 		},
 		{
+			"id":"MUSIC_3",
+			"text":"¡Dibujá melodías!"
+		},
+		{
 			"id":"pista_1",
 			"text":"¡Hola! Bienvenides a esta experiencia inmersiva sobre tecnología que preparamos para vos. Soy Fifí, activista LGBTQIA+ y de la inclusión de personas de este colectivo en el mundo de la programación y la tecnología, y voy a estar guiándote a partir de ahora. ¿Vamos?"
 		},

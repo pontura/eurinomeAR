@@ -12,6 +12,8 @@ public static class Events
     public static System.Action<AudioClip[]> PlaySpecificSoundInArray = delegate { };
     public static System.Action<AudioClip> PlaySpecificSound = delegate { };
     public static System.Action<string, string, bool> PlaySound = delegate { };
+
+    public static System.Action ExitQR = delegate { };
     public static System.Action<string, float> ChangeVolume = delegate { };
 
 }
