@@ -7,10 +7,12 @@ public class TextsManager : MonoBehaviour
 {
     public TextAsset textAsset;
     public AllData all;
+    public bool loaded;
 
     private void Awake()
     {
-        all = JsonUtility.FromJson<AllData>(textAsset.text);
+        if(!loaded)
+            all = JsonUtility.FromJson<AllData>(textAsset.text);
     }
     [Serializable]
     public class AllData
@@ -22,6 +24,7 @@ public class TextsManager : MonoBehaviour
     {
         public string id;
         public string text;
+        public int seconds;
     }
     public string GetText(string id)
     {

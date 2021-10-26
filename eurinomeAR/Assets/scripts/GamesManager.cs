@@ -51,7 +51,22 @@ public class GamesManager : MonoBehaviour
     }
     public void Reset()
     {
+        CloseAllApps();
+        GetComponent<PistasManager>().Reset();
+        configs.Close();
+    }
+    public void CloseAllApps()
+    {
         foreach (ArExperience are in configs.games)
+        {
             are.Reset();
+            are.SetOn(false);
+        }
+    }
+    public void ForzarRA()
+    {
+        CloseAllApps();
+        configs.Close();
+        GetComponent<PistasManager>().OpenRA();
     }
 }

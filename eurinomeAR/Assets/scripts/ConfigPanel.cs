@@ -59,7 +59,7 @@ public class ConfigPanel : MonoBehaviour
         isOpen = true;
         panel.SetActive(true);
     }
-    void Close()
+    public void Close()
     {
         isOpen = false;
         panel.SetActive(false);
