@@ -48,10 +48,11 @@ public class PistasManager : MonoBehaviour
     string animName = "";
     void Update()
     {
+        timer += Time.deltaTime;
+
         if (isOver)
             return;
 
-        timer += Time.deltaTime;
         if (timer > nextTimer-1 && animName != "text_off")
         {
             animName = "text_off";
@@ -119,7 +120,6 @@ public class PistasManager : MonoBehaviour
         GamesManager.Instance.SetVuforiaOn(true);
         anim.Play("ar");
         field.text = "";
-        isOver = true;
         buttonInit.SetActive(false);
     }
 }
