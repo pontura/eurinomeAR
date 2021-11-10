@@ -24,6 +24,7 @@ public class ParticlesFromCenter : MonoBehaviour
     void OnEnable()
     {
         Invoke("Delayed", 0.5f);
+        Invoke("Loop", 1);
     }
     void Delayed()
     {
@@ -58,8 +59,9 @@ public class ParticlesFromCenter : MonoBehaviour
         all.Add(vp);
     }
 
-    void Update()
+    void Loop()
     {
+        Invoke("Loop", 0.25f);
         VideogameParticle toRemove = null;
         foreach (VideogameParticle v in all)
         {

@@ -9,6 +9,6 @@ public class SportsIntro : MonoBehaviour
 
     private void OnEnable()
     {
-        characterAnims.SetSpeed(2);
+        characterAnims.SetSpeed(1);
     }
 }

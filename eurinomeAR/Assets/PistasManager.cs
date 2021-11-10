@@ -12,13 +12,30 @@ public class PistasManager : MonoBehaviour
     public Animation anim;
     public float timer;
     public float nextTimer;
-    bool isOver;
+    public bool isOver;
     public InputField initialTimeInputfield;
-    public GameObject buttonInit;
+    public Text countDownField;
 
     private void Start()
     {
-        Reset();
+        isOver = true;
+        countDownField.text = "";
+        Invoke("Init", 3);
+        Invoke("Delayed", 0.1f);
+    }
+    int cid = 3;
+    void Delayed()
+    {
+        if(cid == 3)
+            Events.PlaySound("bg", "countdown", false);
+        if (cid > 0)
+        {
+            countDownField.text = cid.ToString();
+            cid--;
+            Invoke("Delayed", 1);
+        }
+        else
+            countDownField.text = "";
     }
     public void Reset()
     {
@@ -27,12 +44,15 @@ public class PistasManager : MonoBehaviour
         field.text = "";
         isOver = true;
         panel.SetActive(true);
-        buttonInit.SetActive(true);
+      //  buttonInit.SetActive(true);
         ResetVuforia();
     }
-    public void Init() // lo activa boton de la ui
+    //public 
+    void Init() 
     {
-        buttonInit.SetActive(false);
+        animName = "reset";
+        anim.Play(animName);
+        // buttonInit.SetActive(false);
         nextTimer = int.Parse(initialTimeInputfield.text);
         GamesManager.Instance.SetVuforiaOn(false);
         anim.Play("fullScreen");
@@ -61,7 +81,9 @@ public class PistasManager : MonoBehaviour
         if (timer > nextTimer)
             Next();
         if (timer > 336)
-            Reset();
+        {
+            GetComponent<ConfigPanel>().Quit();
+        }
     }
     void Next()
     {
@@ -120,6 +142,6 @@ public class PistasManager : MonoBehaviour
         GamesManager.Instance.SetVuforiaOn(true);
         anim.Play("ar");
         field.text = "";
-        buttonInit.SetActive(false);
+      //  buttonInit.SetActive(false);
     }
 }

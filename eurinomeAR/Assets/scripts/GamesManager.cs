@@ -67,6 +67,8 @@ public class GamesManager : MonoBehaviour
     {
         CloseAllApps();
         configs.Close();
+        GetComponent<PistasManager>().Reset();
         GetComponent<PistasManager>().OpenRA();
+        GetComponent<PistasManager>().isOver = true;
     }
 }

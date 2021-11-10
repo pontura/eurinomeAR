@@ -118,4 +118,22 @@ public class ConfigPanel : MonoBehaviour
             id++;
         }
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+    float t;
+    public void OnPointerDown()
+    {
+        if (isOpen)
+            Close();
+        t = Time.time;
+    }
+    public void OnPointerUp()
+    {
+        if (t > Time.time - 1) return;
+        if (!isOpen)
+            Open();
+        t = 0;
+    }
 }

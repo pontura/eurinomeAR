@@ -13,13 +13,14 @@ public class AudioManager : MonoBehaviour
         [HideInInspector] public AudioSource audioSource;
         public float volume = 1;
     }
-    void Start()
+    void Awake()
     {
         Events.PlaySpecificSound += PlaySpecificSound;
         Events.PlaySpecificSoundInArray += PlaySpecificSoundInArray;
         Events.PlaySound += PlaySound;
         Events.ChangeVolume += ChangeVolume;
         Events.ExitQR += ExitQR;
+
         foreach (AudioSourceManager m in all)
         {
             m.audioSource = gameObject.AddComponent<AudioSource>();
