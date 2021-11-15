@@ -15,20 +15,32 @@ public class ConfigPanel : MonoBehaviour
     public GameObject durationContainer;
     public bool forceInitActive;
     public GameObject qrPanelFilm;
+    public int totalDuration;
+    public InputField totalDurationField;
 
     private void Awake()
     {
         qrPanelFilm.SetActive(false);
+        totalDuration = PlayerPrefs.GetInt("totalDuration", 705);
+        totalDurationField.text = totalDuration.ToString();
+    }
+    public void ChangeDurationTotal()
+    {
+        totalDuration = int.Parse(totalDurationField.text);
+        PlayerPrefs.SetInt("totalDuration", totalDuration);
     }
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         Close();
         int id = 0;
+        totalDurationField.text = totalDuration.ToString();
+
+
         scaleInputfields = scalesContainer.GetComponentsInChildren<InputField>();
         foreach (InputField f in scaleInputfields)
         {
-            string t = PlayerPrefs.GetString("scale_" + id, "75");
+            string t = PlayerPrefs.GetString("scale_" + id, "100");
             f.text = t;
             id++;
         }

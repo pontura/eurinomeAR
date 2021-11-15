@@ -15,6 +15,7 @@ public class PistasManager : MonoBehaviour
     public bool isOver;
     public InputField initialTimeInputfield;
     public Text countDownField;
+    int totalDuration = 705;
 
     private void Start()
     {
@@ -26,7 +27,8 @@ public class PistasManager : MonoBehaviour
     int cid = 3;
     void Delayed()
     {
-        if(cid == 3)
+        totalDuration = GetComponent<ConfigPanel>().totalDuration;
+        if (cid == 3)
             Events.PlaySound("bg", "countdown", false);
         if (cid > 0)
         {
@@ -80,7 +82,7 @@ public class PistasManager : MonoBehaviour
         }
         if (timer > nextTimer)
             Next();
-        if (timer > 336)
+        if (timer > totalDuration) //705 es 6:45
         {
             GetComponent<ConfigPanel>().Quit();
         }

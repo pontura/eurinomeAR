@@ -11311,6 +11311,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.011
       objectReference: {fileID: 0}
+    - target: {fileID: 6897327334091101637, guid: 2fe842cd5643f9c4b9da06d418141176, type: 3}
+      propertyPath: tipID
+      value: VIDEOJUEGOS_TIP_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897327334091101637, guid: 2fe842cd5643f9c4b9da06d418141176, type: 3}
+      propertyPath: answer
+      value: VIDEOJUEGOS_ANSWER_1
+      objectReference: {fileID: 0}
     - target: {fileID: 6897327334091101639, guid: 2fe842cd5643f9c4b9da06d418141176, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
